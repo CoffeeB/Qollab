@@ -8,7 +8,7 @@ export default function onboarding() {
     const router = useRouter();
 
     const redirectToSignUp = () => {
-        router.push('/get-started')
+        router.push('/question')
     }
     
     return (
@@ -25,7 +25,7 @@ export default function onboarding() {
                             </div>
                             <div className="btns-sect">
                                 <Button text={'Publicly'} performAction={redirectToSignUp} className='fw-bold fs-4 rounded-pill btn-white ' />
-                                <Button text={''} className='btn-white grey fw-bold fs-4 rounded-pill'/>
+                                <Button text={'Privately'} performAction={redirectToSignUp} className='btn-white grey fw-bold fs-4 rounded-pill'/>
                             </div>
                         </div>
                     </div>
