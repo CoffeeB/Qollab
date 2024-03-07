@@ -54,11 +54,13 @@ export default function Home({ userImage, userAge, userName, cardName }) {
         for (let i = 0; i < totalSideCards; i++) {
             sideCards.push(
                 <React.Fragment key={i}>
-                    <div className='col-12'>
-                        <SideCard performAction={viewUserProfile} userImage={userImage} userName={userName} userAge={userAge} cardName={cardName} />
-                    </div>
-                    <div className='row border-4 ms-lg-2 mt-3 mb-0 border-start border-danger px-0 align-items-center flex-wrap'>
-                        <SectionHead text={cardName || 'Model of the Day'} />
+                    <div className='mb-4'>    
+                        <div className='row border-4 ms-lg-2 mt-3 mb-0 border-start border-danger px-0 align-items-center flex-wrap'>
+                            <SectionHead text={cardName || 'Model of the Day'} />
+                        </div>
+                        <div className='col-12'>
+                            <SideCard performAction={viewUserProfile} userImage={userImage} userName={userName} userAge={userAge} cardName={cardName} />
+                        </div>
                     </div>
                 </React.Fragment>
             );
