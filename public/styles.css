@@ -314,3 +314,8 @@ a span{
         overflow-x: auto
     }
 }
+
+:focus-visible {
+    -webkit-appearance: none !important;
+    outline: none;
+}

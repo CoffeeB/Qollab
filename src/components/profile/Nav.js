@@ -42,7 +42,7 @@ export default function Nav() {
                         </Link>
                   </div>
                   {/* <!-- Heading --> */}
-                  <div className="sidebar-heading mb-8 mt-3">
+                  <div className="sidebar-heading mb-5 mt-3">
                     <li className={`nav-item my-2 ${router.pathname === '/home' || router.pathname === '/viewProfile' ? 'text-danger' : 'text-grey'}`} data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
                         <Link href={'/home'} className="nav-link">
                             <i className="bx bxs-home-alt-2 display-6" />

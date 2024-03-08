@@ -41,7 +41,7 @@ export default function Footer() {
                     <h5>Stay Up to Date</h5>
                     <div className='pt-1'>
                         <input className='w-100 p-2 rounded-start-2  text-light border-0' placeholder='Your email address' type='email'/>
-                        <a className='bx bxs-paper-plane hover-danger bg-light px-2 pt-1 pb-2 rounded-end-2 rounded-0 display-7 position-absolute'/>
+                        <button className='hover-danger bg-light px-2 pt-1 rounded-end-2 rounded-0 display-7 border-0 position-absolute'><i className='bx bxs-paper-plane'/></button>
                     </div>
                 </div>
             </div>

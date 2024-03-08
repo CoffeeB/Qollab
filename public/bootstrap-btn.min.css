@@ -4481,7 +4481,7 @@ textarea.form-control-lg {
 .input-group > .form-control:focus,
 .input-group > .form-floating:focus-within,
 .input-group > .form-select:focus {
-    z-index: 5;
+    /* z-index: 5; */
 }
 .input-group .btn {
     position: relative;

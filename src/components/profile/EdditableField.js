@@ -28,15 +28,15 @@ const EditableField = ({ label, value, options, onUpdate }) => {
         <div className="col-2">
           {!isEditing ? (
             <button
-              className="text-success btn-sm"
+              className="text-light rounded-3 bg-transparent border-1 border border-danger btn-sm"
               onClick={handleEditClick}
               aria-label={`Edit ${label}`}
             >
-              <i className="bx bx-pencil"></i>
+              <i className="bx bx-pencil display-7"></i>
             </button>
           ) : (
             <button
-              className="btn-outline-danger btn-sm"
+              className="text-danger rounded-3 bg-transparent border-1 border border-danger btn-sm"
               onClick={handleCancelClick}
               aria-label={`Cancel ${label} edit`}
             >
@@ -76,7 +76,7 @@ const EditableField = ({ label, value, options, onUpdate }) => {
             </div>
             <div className="col-2">
               <button
-                className="btn-outline-success btn-sm rounded ms-2"
+                className="text-light hover-danger rounded-3 bg-transparent border-1 border border-success btn-sm"
                 onClick={handleUpdateClick}
                 aria-label={`Update ${label}`}
               >
