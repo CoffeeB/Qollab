@@ -37,7 +37,7 @@ export default function Nav() {
                   <div className="sidebar-heading mt-4">
                         <Link href='/profile'>
                             <div className={`${router.pathname === '/profile' ? 'border rounded-circle p-0':''}`}>
-                                <img src="/lucas-canino-Lk4Bk3gPdoc-unsplash.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar avatar-xl rounded-circle" />
+                                <img src="/Blank_Profile.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar avatar-xl rounded-circle" />
                             </div>
                         </Link>
                   </div>
