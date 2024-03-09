@@ -592,8 +592,8 @@ const QuestionPage = () => {
                                         }
                                     </div>
                                     <div className="d-flex justify-content-between mt-5">
-                                        <Link href={"/login"} className="text-danger"><span className="text-light">Already have an Account?</span> Sign In</Link>
-                                        <a className="text-danger">View Profile</a>
+                                        <Link href={"/login"} className="text-danger fs-7"><span className="text-light">Already have an Account?</span> Sign In</Link>
+                                        <a className="text-danger fs-7">View Profile</a>
                                     </div>
                                 </div>
                             </div>

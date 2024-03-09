@@ -36,20 +36,20 @@ export default function Search({ userImage, userName, userAge, cardName }) {
     return (
         <div className="row">
 
-            <div className="col-5 p-0">
+            <div className="col-lg-5 col-sm-12 p-lg-0 p-sm-0 px-md-5">
                 <div className="border-0 rounded-0 card-common overflow-auto contain-info">
                     <div className="card-body px-3">
                         <div className="chat-app">
                             <div className="chat">
                                 <div className="chat-history">
                                     <ul className="mb-0">
-                                        <li className="clearfix">
-                                            <div className="message rounded-bottom-5 mb-2 rounded-start-5 my-message float-right mb-2">
+                                        <li className="clearfix w-100">
+                                            <div className="message rounded-bottom-5 mb-2 rounded-start-5 my-message w-60 float-right mb-2">
                                                 I'm looking for a partner
                                             </div>
                                         </li>
-                                        <li className="clearfix">
-                                            <div className="message rounded-bottom-5 mb-2 rounded-end-5 other-message float-left">
+                                        <li className="clearfix w-100">
+                                            <div className="message rounded-bottom-5 mb-2 rounded-end-5 other-message w-100 w-md-50 w-sm-50 float-left">
                                                 Project has been already finished and I have results to show you.
                                             </div>
                                         </li>
@@ -69,7 +69,7 @@ export default function Search({ userImage, userName, userAge, cardName }) {
                 </div>
             </div>
 
-            <div className="col-7 pt-0">
+            <div className="col-lg-7 d-lg-block d-none pt-0">
                 <div className="card pb-9 pt-0 px-6 border-0 rounded-0 card-common overflow-auto contain-info">
                     <div className="card-body pt-0">
                         <div>

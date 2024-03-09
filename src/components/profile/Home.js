@@ -20,7 +20,7 @@ export default function Home({ userImage, userAge, userName, cardName }) {
         for (let i = 0; i < maxDispalyedProfiles; i++) {
             featuredProfiles.push(
                 <React.Fragment key={i}>
-                    <div key={i} className='col-lg-2 col-md-4 col-sm-12 p-0 px-1'>
+                    <div key={i} className='col-lg-2 col-md-4 d-md-block d-none p-0 px-1'>
                         <Featured userImage={userImage} performAction={viewUserProfile}/>
                     </div>
                 </React.Fragment>
@@ -37,7 +37,7 @@ export default function Home({ userImage, userAge, userName, cardName }) {
         for (let i = 0; i < totalDispalyedProfiles; i++) {
             topProfiles.push(
                 <React.Fragment key={i}>
-                    <div key={i} className='col-lg-2 col-md-4 col-sm-12 p-0 px-1'>
+                    <div key={i} className='col-lg-2 col-md-4 d-md-block d-none p-0 px-1'>
                         <Top userImage={userImage} performAction={viewUserProfile} />
                     </div>
                 </React.Fragment>
@@ -70,13 +70,13 @@ export default function Home({ userImage, userAge, userName, cardName }) {
     }
 
     return (
-    <div className="row pt-5 mt-3">
+    <div className="row pt-5 ps-3 mt-3">
                 
-        <div className="col-9 p-0">
+        <div className="col-lg-9 p-0 col-sm-12">
             <div className="card border-0 py-5 rounded-0 card-common overflow-auto contain-info">
                 <div className="card-body">
                     <div className="d-flex flex-column">
-                        <div className="text-center mt-10 d-flex flex-column align-items-center">
+                        <div className="text-center mt-10 mt-sm-0 d-flex flex-column align-items-center">
                             <div className='d-flex flex-column align-items-center'>
                                 <a className='text-danger text-left fs-2 fw-bold'>Relationship with Reasns</a>
                                 <span className='text-light text-center w-65 fs-6'>Find an instant friend, Choose from a list of social butterflies below</span> 
@@ -84,9 +84,9 @@ export default function Home({ userImage, userAge, userName, cardName }) {
                         </div>
                         <div onClick={viewUserProfile} className='position-relative d-flex mt-6 flex-column align-items-center'>
                             <img src="/toa-heftiba-62H0SbdJUvI-unsplash.jpg" alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-4" />
-                            <div className="position-absolute bottom-0 start-5 translate-middle-x bg-transparent fs-5 p-3 w-50">
-                                <div className='text-uppercase mt-3 bg-danger w-60 px-3 fs-6 badge'>Reasns Profile of the day</div>
-                                <div className='mt-3 d-grid bg-black-2 p-3 fs-5 w-60'>
+                            <div className="position-absolute bottom-0 start-0 bg-transparent fs-5 p-3 w-lg-50 sm-w-100">
+                                <div className='text-uppercase mt-3 bg-danger w-lg-60 sm-w-100 px-3 fs-6 badge'>Reasns Profile of the day</div>
+                                <div className='mt-3 d-grid bg-black-2 p-3 fs-5 w-lg-60 sm-w-100'>
                                     <span className='fw-bold text-uppercase'>Luciana Peters, 24</span>
                                     <span className=''>Gwarimpa, Abuja</span>
                                 </div>
@@ -107,7 +107,7 @@ export default function Home({ userImage, userAge, userName, cardName }) {
             </div>
         </div>
     
-        <div className="col-3 p-0 px-0">
+        <div className="col-lg-3 d-lg-block p-0 px-0 d-none">
             <div className="card col-12 py-5 pt-0 border-0 h-100 rounded-0 card-common overflow-auto contain-info">
                 <div className="card-body px-3 pt-0">
                     <div>

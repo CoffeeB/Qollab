@@ -16,7 +16,7 @@ export default function onboarding() {
         <Layout />
         <section className="py-5">
             <div className="container">
-                <div className="row bg-pattern rounded-3 p-7 g-0">
+                <div className="row bg-pattern rounded-3 p-7 px-2 g-0">
                     <div className="col-xl-8 col-lg-10 whole-content offset-lg-1 col-md-12 col-12">
                         <div className="position-relative content z-1 my-lg-5">
                             <div className="mb-5 content-text text-center">
@@ -24,8 +24,8 @@ export default function onboarding() {
                                 <p className="mb-4 mt-4 sub-text text-white-stable">Create an extensive profile and find that special someone to spend the rest of your life with.</p>
                             </div>
                             <div className="btns-sect">
-                                <Button text={'Publicly'} performAction={redirectToSignUp} className='fw-bold fs-4 rounded-pill btn-white ' />
-                                <Button text={'Privately'} performAction={redirectToSignUp} className='btn-white grey fw-bold fs-4 rounded-pill'/>
+                                <Button text={'Publicly'} performAction={redirectToSignUp} className='fw-bold rounded-pill btn-white ' />
+                                <Button text={'Privately'} performAction={redirectToSignUp} className='btn-white grey fw-bold rounded-pill'/>
                             </div>
                         </div>
                     </div>

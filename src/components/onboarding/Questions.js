@@ -35,7 +35,7 @@ const Questions = ({ questions }) => {
                 return(
                     <div>
                         {question.options.map((option, index) => (
-                            <div className='row mb-4 flex-row-reverse flex-nowrap justify-content-end text-grey' key={index}>
+                            <div className='row mb-4 me-7 flex-row-reverse flex-nowrap justify-content-end text-grey' key={index}>
                                 <input 
                                     className='form-control  form-check-input'
                                     type="radio" 

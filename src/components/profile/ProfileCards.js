@@ -15,7 +15,7 @@ const Featured = ({ userImage, userName, distance, performAction }) => {
                     </div>
                 </div>
                 <div className="position-absolute rounded-2 d-flex justify-content-between align-items-center bottom-0 start-5 translate-end-x bg-transparent w-100">
-                    <div className='d-flex align-items-center p-2 w-100'>
+                    <div className='p-2 w-100'>
                         <i className='bx bxs-circle text-success w-10 me-2'/>
                         <span className='fs-7'>{userName || "Samuel"}</span>
                     </div>
@@ -41,7 +41,7 @@ const Top = ({ userImage, userName, distance, performAction }) => {
                         </div>
                     </div>
                     <div className="position-absolute rounded-2 pt-5 d-flex justify-content-between align-items-center bottom-0 start-5 translate-end-x bg-transparent w-100">
-                        <div className='d-flex align-items-center p-2 w-100'>
+                        <div className='p-2 w-100'>
                             <i className='bx bxs-circle text-success w-10 me-2'/>
                             <span className='fs-7'>{userName || "Samuel"}</span>
                         </div>

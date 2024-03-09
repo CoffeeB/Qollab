@@ -11,6 +11,9 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isResendButtonDisabled, setIsResendButtonDisabled] = useState(false);
     const inputRefs = [useRef(), useRef(), useRef(), useRef()];
+    const [isLoading, setIsloading] = useState(false);
+
+    const loadingText = (!isLoading) ? "Verify" : "Verifying Code ...";
 
     useEffect(() => {
         setIsButtonDisabled(verificationCode.some((digit) => digit === ''));
@@ -38,6 +41,7 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
         e.preventDefault();
 
         try {
+            setIsloading(true);
             const response = await api.post('care-seekers/verify-code', {
                 verificationCode: parseInt(verificationCode.join('')),
                 email,
@@ -94,6 +98,8 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
             });
             setIsResendButtonDisabled(!error?.response?.data?.resend_allowed);
             console.error('Verification Failed:', error?.response?.data?.message);
+        } finally {
+            setIsloading(false);
         }
     };
 
@@ -120,14 +126,15 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
     };
 
     return (
-        <div className="container mt-5">
-            <form onSubmit={handleFormSubmit}>
-                <div className="container row mx-lg-4 px-4 mb-3">
+        <div className="card border-0 mx-5">
+            <h1 className="h3 text-light text-center mt-3"> Enter Verification Code</h1>
+            <form onSubmit={handleFormSubmit} className="form-goup">
+                <div className="row mx-lg-4 mx-2 mb-3 py-2">
                     {verificationCode.map((digit, index) => (
-                        <div key={index} className="col-3 mb-2 border-0">
+                        <div key={index} className="col-3 px-1 mb-2 border-0">
                             <input
                                 type="text"
-                                className="form-control form-control-sm"
+                                className="form-control form-control-lg text-center border-2 border-primary"
                                 maxLength="1"
                                 value={digit}
                                 onChange={(e) => handleInputChange(index, e.target.value)}
@@ -137,16 +144,15 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
                         </div>
                     ))}
                 </div>
-                <div className="row my-4">
-                    <button type="submit" className="btn btn-primary rounded-pill" disabled={isButtonDisabled}>
-                        Verify
+                <div className="row my-4 px-2 mx-5 border-1 border-bottom border-primary pb-5">
+                    <button type="submit" className={`btn btn-primary rounded-pill w-100 text-light`} >
+                        {loadingText}
                     </button>
                 </div>
-                <hr />
-                <div className="row my-4">
+                <div className="row my-4 mx-5 px-2">
                     <button
                         type="submit"
-                        className="btn btn-outline-success rounded-pill"
+                        className="btn btn-success rounded-pill w-100"
                         onClick={handleResendVerification}
                         disabled={isResendButtonDisabled}
                     >

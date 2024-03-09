@@ -13,7 +13,7 @@ export default function Notifications() {
             <PageHeader text={'Notifications'}/>
             <div className='p-0'>
                 <div className='row p-0 overflow-auto vh-80'>
-                  <div className='col-6 border-1 border-end border-grey bg-dark p-0'>
+                  <div className='col-md-6 col-sm-12 border-1 border-end border-grey bg-dark p-0'>
                     <p className='fs-3 text-danger fw-bold px-5'>Today</p>
                     <div className='d-flex align-items-end border-bottom border-white border-1 justify-content-between px-6 pb-2 '>
                       <div>
@@ -23,7 +23,7 @@ export default function Notifications() {
                       <Link href={"/viewProfile"} className='text-danger'>View Contact Details</Link>
                     </div>
                   </div>
-                  <div className='col-6'>
+                  <div className='col-md-6 d-md-block d-none'>
                     <div className='p-5'>
                       <p className='fs-3'>You have successfully paid for jane doe's details</p>
                       <span className='d-grid'>

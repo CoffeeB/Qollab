@@ -57,7 +57,7 @@ export default function LoginPage() {
                 <section className="row justify-content-center py-2">
                     <div className="row">
                         <div className="row rounded-3 pt-5 g-0">
-                            <div className='col-lg-7'>
+                            <div className='col-lg-7 col-sm-none'>
                                 
                             </div>
                             <div className="col-lg-5 col-md-12 col-sm-12">
@@ -70,23 +70,23 @@ export default function LoginPage() {
                                             <div className="row">
                                                 <p className='text-danger fs-2 fw-bold'>Login</p>
                                                 <form className='col-12 px-3 my-2'>
-                                                    <div className='px-0 border-bottom fs-4  cursor-pointer justify-content-between align-items-center border-white border-1'>
+                                                    <div className='px-0 fs-4  cursor-pointer justify-content-between align-items-center'>
                                                         <label htmlFor='email' className='p-0 mt-2 mb-4'>Email Address</label>
                                                         <input
                                                             id='email'
                                                             type='email'
                                                             autoComplete='off'
-                                                            className="d-flex form-control border-0 text-grey p-0 pb-1 w-100 fs-4 border"
+                                                            className="form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 "
                                                             placeholder='Email'
                                                         />
                                                     </div>
-                                                    <div className='px-0 border-bottom fs-4 cursor-pointer justify-content-between align-items-center border-white border-1'>
+                                                    <div className='px-0 fs-4 cursor-pointer justify-content-between align-items-center'>
                                                         <label htmlFor='password' className='p-0 mt-2 mb-4'>Password</label>
                                                         <input
                                                             id='password'
                                                             autoComplete='off'
                                                             type='password'
-                                                            className="d-flex form-control border-0 text-grey p-0 pb-1 w-100 fs-4 border"
+                                                            className="form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 "
                                                             placeholder='Password'
                                                         />
                                                     </div>
