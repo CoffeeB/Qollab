@@ -5,7 +5,7 @@ import SideCard from '@/components/profile/SideCards';
 import SectionHead from '@/components/profile/SectionHead';
 import { useRouter } from 'next/router';
 
-export default function Home({ userImage, userAge, userName, cardName }) {
+export default function Home({ userImage, userAge, userName, cardName, className }) {
     const router = useRouter();
 
     const viewUserProfile = () => {
@@ -70,13 +70,13 @@ export default function Home({ userImage, userAge, userName, cardName }) {
     }
 
     return (
-    <div className="row pt-5 ps-3 mt-3">
+    <div className="row pt-lg-5 ps-3 mt-lg-3 pt-sm-0 mt-sm-0 pe-0">
                 
         <div className="col-lg-9 p-0 col-sm-12">
-            <div className="card border-0 py-5 rounded-0 card-common overflow-auto contain-info">
+            <div className="card border-0 py-lg-5 py-sm-0 rounded-0 card-common overflow-auto vh-100">
                 <div className="card-body">
                     <div className="d-flex flex-column">
-                        <div className="text-center mt-10 mt-sm-0 d-flex flex-column align-items-center">
+                        <div className="text-center mt-lg-10 mt-sm-0 d-flex flex-column align-items-center">
                             <div className='d-flex flex-column align-items-center'>
                                 <a className='text-danger text-left fs-2 fw-bold'>Relationship with Reasns</a>
                                 <span className='text-light text-center w-65 fs-6'>Find an instant friend, Choose from a list of social butterflies below</span> 
@@ -103,12 +103,12 @@ export default function Home({ userImage, userAge, userName, cardName }) {
                         {createTopProfiles()}
                     </div>
                 </div>
-                <Footer />
+                <Footer className="d-none d-md-block" />
             </div>
         </div>
     
         <div className="col-lg-3 d-lg-block p-0 px-0 d-none">
-            <div className="card col-12 py-5 pt-0 border-0 h-100 rounded-0 card-common overflow-auto contain-info">
+            <div className="card col-12 py-5 pt-0 border-0 h-100 rounded-0 card-common overflow-auto vh-100">
                 <div className="card-body px-3 pt-0">
                     <div>
                         <div className="text-left text-secondary">

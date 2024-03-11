@@ -22,7 +22,7 @@ const EditableField = ({ label, value, options, onUpdate }) => {
   return (
     <div className="mb-3">
       <div className="row justify-content-between align-items-center mb-2 border-2 border-bottom border-light py-2">
-        <div className="col-md-10">
+        <div className="col-10">
           <label className="me-2 text-light">{label}:</label>
         </div>
         <div className="col-2">

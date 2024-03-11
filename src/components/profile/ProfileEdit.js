@@ -33,8 +33,8 @@ export default function ProfileEdit({ handleStepChange }) {
     }
 
   return (
-    <div className="row pt-5 mt-3">
-        <div className="card border-0 border-grey rounded-0 col-lg-4 col-md-4 me-0 p-2 pt-0 pe-0 border-end overflow-auto contain-info">
+    <div className="row pt-5 mt-3 overflow-auto vh-100">
+        <div className="card border-0 border-grey rounded-0 col-lg-4 col-md-6 col-sm-12 me-0 p-2 pt-0 pe-0 border-end">
             <div className="card-common">
                 <div className="card-body">
                     <div className="d-flex flex-column justify-content-center">
@@ -75,15 +75,15 @@ export default function ProfileEdit({ handleStepChange }) {
                 </div>
             </div>
         </div>
-        <div className="card border-0 d-none overflow-auto rounded-0 col-lg-8 col-md-6 col-sm-6 p-2 pt-0 ps-0 contain-info" id='editableField'>
+        <div className="card border-0 d-none overflow-auto rounded-0 col-lg-8 col-md-6 col-sm-12 p-2 pt-0 ps-0 vh-100" id='editableField'>
             <div className="card-body">
-                <div className="p-4 w-100">
+                <div className="p-md-4 w-100">
                     <div className="d-flex flex-column justify-content-between">
-                        <a className='m-0 text-danger d-flex justify-content-end fs-4 fw-bold' onClick={closeEditField}>Done</a>
-                        <div className='col-lg-6 col-md-6 px-3'>
+                        <a className='m-0 mb-4 text-danger d-flex justify-content-end fs-4 fw-bold' onClick={closeEditField}>Done</a>
+                        <div className='col-12 px-3'>
                             {Object.entries(userProfile).map(([
                                     field, value]) => 
-                                    <div key={field} className='col-10'>
+                                    <div key={field} className='col-12'>
                                         <EditableField label={field
                                             .split('_')
                                             .map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} value={value} 

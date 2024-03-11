@@ -1,9 +1,9 @@
 import React from 'react'
 import Logo from '../general/Logo';
 
-export default function Footer() {
+export default function Footer({className}) {
   return (
-    <footer className='bg-black-2 col-sm-12 fs-6 w-100'>
+    <footer className={`bg-black-2 col-sm-12 fs-6 w-100 ${className}`}>
         <div className='row p-4 w-100'>
             <div className='col-md-4 col-sm-6 p-4'>
                 <Logo />

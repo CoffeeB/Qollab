@@ -1,60 +1,3 @@
-.login-btn {
-    width: 150px;
-    height: 49.62px;
-    top: 62px;
-    left: 1004px;
-    padding: 11.24px;
-    border: 1px solid !important;
-    border-color: #ff1313 !important;
-    position: sticky;
-    color: #fff;
-    cursor: pointer;
-    background-color: transparent !important;
-}
-
-.login-btn:hover {
-    background: #fff !important;
-    border: none !important;
-    color: #ff1313 !important;
-}
-
-.login-btn-container{
-    margin-right: 15rem;
-}
-
-.head-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.logo-div {
-    width: 401px;
-    height: 68px;
-    top: 53px;
-    padding: 16px;
-    border-bottom: 1px solid #ffffff36;
-    gap: 4px;
-    display: flex;
-    justify-content: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
-.logo p{
-    margin-bottom: 0;
-    font-size: 25px;
-    margin-left: 5px;
-}
-
-.actual-logo {
-    max-width: 10px;
-    max-height: 10px;
-}
-
 .container {
     position: absolute;
     left: 0;
@@ -163,16 +106,6 @@ a span{
     transition: 0.1s ease-in-out;
 }
 
-.contain-info {
-    min-height: 98.5vh !important;
-    max-height: 98.5vh !important;
-}
-
-.other-contain-info {
-    max-height: 83vh;
-    overflow: hidden;
-}
-
 .profile {
     max-height: 25rem !important;
 }
@@ -219,71 +152,6 @@ a span{
 
 .bg-gradient-top {
     background: linear-gradient(to top, #000000ed, #00000000, #00000000);
-}
-
-.fixed-btn {
-    position: fixed;
-    z-index: 1010;
-    right: 1.5em;
-    bottom: 0;
-}
-
-.fixed-header{
-    position: fixed;
-    z-index: 1010;
-    top: 0;
-}
-
-.chat .chat-history {
-    /* padding: 20px; */
-    max-height: 70vh;
-    min-height: 70vh;
-    overflow: auto;
-    /* border-bottom: 2px solid #fff; */
-}
-
-.chat .chat-history ul {
-    padding: 0
-}
-
-.chat .chat-history ul li {
-    list-style: none;
-    margin-bottom: 30px;
-}
-
-.chat .chat-history ul li:last-child {
-    margin-bottom: 0px
-}
-
-.chat .chat-history .message {
-    color: #444;
-    padding: 18px 20px;
-    line-height: 26px;
-    font-size: 16px;
-    display: inline-block;
-    position: relative;
-}
-
-.chat .chat-history .my-message {
-    background: #efefef;
-    width: 60%;
-}
-
-.chat .chat-history .other-message {
-    background: #e8f1f3;
-    width: 100%;
-}
-
-.chat .chat-message {
-    padding: 20px
-}
-
-.float-right {
-    float: right
-}
-
-.float-left {
-    float: left;
 }
 
 @media only screen and (max-width: 767px) {

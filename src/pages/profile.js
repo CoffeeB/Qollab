@@ -6,9 +6,9 @@ export default function profile() {
   return (
     <>
       <Nav />
-      <section className=" z-n1 ps-10">
+      <section className=" z-n1 ps-lg-10 px-sm-0">
         <div className="container-fluid">
-          <div className="row overflow-hidden contain-info">
+          <div className="row overflow-hidden vh-100">
             <div>
               <Profile />
             </div>

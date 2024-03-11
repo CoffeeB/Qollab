@@ -20,15 +20,16 @@ export default function Landing() {
     }
   return (
     <>
-      <div className='head-container'>
-        <Header />
-        <div className='login-btn-container'>
-          <LoginButton text={'Login'} performAction={redirectToLogin} className='rounded-pill d-sm-none d-md-block' />
+      <div className='row align-items-center justify-content-between'>
+        <div className='col-12 d-flex justify-content-between align-items-center'>
+          <Header/>
+          <div className='col-md-6 col-sm-6'>
+            <LoginButton text={'Login'} performAction={redirectToLogin} className='rounded-pill end-0 position-sticky bg-transparent cursor-pointer text-light border-1 border-danger border btn' />
+          </div>
         </div>
       </div>
       <section className="py-5">
           <div className="container">
-          <LoginButton text={'Login'} performAction={redirectToLogin} className='rounded-pill d-md-none bg-black z-3' />
               <div className="row bg-pattern rounded-3 p-7 px-2 pt-2 g-0">
                   <div className="col-xl-8 col-lg-10 whole-content offset-lg-1 col-md-12 col-sm-12">
                       <div className="position-relative content z-1 my-lg-5">

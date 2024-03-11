@@ -39,7 +39,7 @@ export default function Filter({ userImage, userName, userAge, cardName, filters
         <div className="row">
             {/* Left column with Filters */}
             <div className="col-lg-5 col-md-12 col-sm-12 p-0">
-                <div className="border-0 rounded-0 card-common overflow-auto contain-info">
+                <div className="border-0 rounded-0 card-common">
                     <div className="card-body px-3">
                         <Filters filters={filters}/>
                         <div className="clearfix mt-3">
@@ -53,7 +53,7 @@ export default function Filter({ userImage, userName, userAge, cardName, filters
 
             {/* Right column with SideCards */}
             <div className="col-lg-7 d-none d-lg-block pt-0">
-                <div className="card pb-9 pt-0 px-6 border-0 rounded-0 card-common overflow-auto contain-info">
+                <div className="card pb-9 pt-0 px-6 border-0 rounded-0 card-common overflow-auto vh-100">
                     <div className="card-body pt-0">
                         <div>
                             <div className="text-left text-secondary">

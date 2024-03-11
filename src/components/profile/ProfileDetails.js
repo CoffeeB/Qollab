@@ -8,7 +8,7 @@ export default function ProfileDetails() {
     // Generate the Featured components dynamically
     for (let i = 0; i < maxQuestions; i++) {
         answeredQuestions.push(
-            <div key={i} className="col-6">
+            <div key={i} className="col-md-6 col-12">
                 <Collapsibles name={"Religion and Tribe"} question={"Do you believe in God?"} answer={"Yes. I believe in God"} identity={i} ariaId={"headingOne"}/>
             </div>
         );
@@ -34,9 +34,9 @@ export default function ProfileDetails() {
                     </div>
                 </div>
             </div>
-            <div className="d-flex mt-8 mb-8 col-11 justify-content-end fixed-btn">
-                <div className="text-left text-secondary">
-                    <a className="border border-2 bg-black rounded-1 text-danger p-5 py-3">View safety tips</a>
+            <div class="w-10 d-flex flex-column mb-3 col-11 align-items-end position-fixed end-0 me-1 bottom-0">
+                <div class="text-left">
+                    <button class="my-2 border-0 bg-dark rounded-3 fs-6 text-white p-md-3 p-sm-2" data-bs-toggle="tooltip" data-bs-placement="top" title="View Safety Tips"><i className="bx bxs-shield text-danger display-7"/></button>
                 </div>
             </div>
         </div>

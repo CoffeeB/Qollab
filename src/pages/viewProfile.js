@@ -6,9 +6,13 @@ export default function viewProfile() {
   return (
     <>
       <Nav />
-      <section className=" z-n1 ps-10">
+      <section className=" z-n1 ps-lg-10 ps-sm-0 py-sm-0">
         <div className="container-fluid">
-          <ViewProfile />
+        <div className="row overflow-hidden vh-100">
+          <div>
+            <ViewProfile />
+          </div>
+        </div>
         </div>
       </section>
     </>

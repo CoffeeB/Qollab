@@ -399,6 +399,27 @@
     .min-vh-sm-100 {
         min-height: 100vh !important;
     }
+    .vh-sm-85 {
+        height:-85vh !important;
+    }
+    .vh-sm-95 {
+        height:-95vh !important;
+    }
+    .vh-lg-25 {
+        height: 25vh !important;
+    }
+    .vh-lg-50 {
+        height: 50vh !important;
+    }
+    .vh-lg-70 {
+        height: 70vh !important;
+    }
+    .vh-lg-85 {
+        height: 85vh !important;
+    }
+    .vh-lg-98 {
+        height: 98vh !important;
+    }
     .position-sm-static {
         position: static !important;
     }
@@ -1019,6 +1040,9 @@
     }
     .mh-lg-100 {
         max-height: 100% !important;
+    }
+    .min-vh-lg-98 {
+        min-height: 98.5vh !important;
     }
     .min-vh-lg-100 {
         min-height: 100vh !important;
@@ -9456,6 +9480,9 @@ fieldset:disabled .btn {
 .vh-80 {
     height: 80vh !important;
 }
+.vh-85 {
+    height: 85vh !important;
+}
 .vh-90 {
     height: 90vh !important;
 }
@@ -15080,7 +15107,7 @@ fieldset:disabled .btn {
         padding-left: 5rem !important;
     }
     .ps-md-10 {
-        padding-left: 6rem !important;
+        padding-left: 9% !important;
     }
     .gap-md-0 {
         gap: 0 !important;
@@ -16461,7 +16488,7 @@ fieldset:disabled .btn {
         padding-left: 5rem !important;
     }
     .ps-lg-10 {
-        padding-left: 6rem !important;
+        padding-left: 9% !important;
     }
     .gap-lg-0 {
         gap: 0 !important;

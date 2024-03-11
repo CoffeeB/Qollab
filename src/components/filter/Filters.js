@@ -26,9 +26,9 @@ const Filters = ({ filters }) => {
                     >
                         <option value="">Select</option>
                          
-                        {filter.label == 'Age' ? 
+                        {filter.label == 'Age' || filter.label == 'Height' ? 
                             (filter.options.map((option, index) => (
-                            <option key={index} value={`${option.min}-${option.max}`}>{`${option.min} - ${option.max}`}</option>
+                            <option key={index} value={`${option.min}-${option.max}`}>{`${option.min} - ${option.max} ${filter.label === 'Height' ? 'ft' : 'years'}`}</option>
                             ))) : (
                             filter.options.map((option, index) => (
                                 <option key={index} value={option}>{option}</option>
@@ -38,9 +38,9 @@ const Filters = ({ filters }) => {
                 );
             case "checkbox":
                 return (
-                    <div>
+                    <div className='col-12'>
                         {filter.options.map((option, index) => (
-                            <div key={index} className="form-check form-check-inline">
+                            <div key={index} className="form-check form-check-inline mw-50">
                                 <CheckboxButton
                                     key={index}
                                     label={option}

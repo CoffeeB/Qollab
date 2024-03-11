@@ -37,25 +37,45 @@ export default function Search({ userImage, userName, userAge, cardName }) {
         <div className="row">
 
             <div className="col-lg-5 col-sm-12 p-lg-0 p-sm-0 px-md-5">
-                <div className="border-0 rounded-0 card-common overflow-auto contain-info">
+                <div className="border-0 rounded-0 card-common overflow-x-hidden vh-lg-98 vh-sm-85 mh-100 h-100">
                     <div className="card-body px-3">
                         <div className="chat-app">
                             <div className="chat">
-                                <div className="chat-history">
-                                    <ul className="mb-0">
-                                        <li className="clearfix w-100">
-                                            <div className="message rounded-bottom-5 mb-2 rounded-start-5 my-message w-60 float-right mb-2">
+                                <div className="chat-history overflow-y-scroll overflow-x-hidden vh-70 h-100">
+                                    <ul className="row mb-0 p-0 pt-2">
+                                        <li className="clearfix list-unstyled mb-2 w-100">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
                                                 I'm looking for a partner
                                             </div>
                                         </li>
-                                        <li className="clearfix w-100">
-                                            <div className="message rounded-bottom-5 mb-2 rounded-end-5 other-message w-100 w-md-50 w-sm-50 float-left">
+                                        <li className="clearfix list-unstyled mb-2 w-100">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
+                                                Project has been already finished and I have results to show you.
+                                            </div>
+                                        </li>
+                                        <li className="clearfix list-unstyled mb-2 w-100">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
+                                                I'm looking for a partner
+                                            </div>
+                                        </li>
+                                        <li className="clearfix list-unstyled mb-2 w-100">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
+                                                Project has been already finished and I have results to show you.
+                                            </div>
+                                        </li>
+                                        <li className="clearfix list-unstyled mb-2 w-100">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
+                                                I'm looking for a partner
+                                            </div>
+                                        </li>
+                                        <li className="clearfix list-unstyled mb-2 w-100">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
                                                 Project has been already finished and I have results to show you.
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
-                                <div className="chat-message clearfix">
+                                <div className="p-3 clearfix">
                                     <div className="input-group mb-0">
                                         <input type="text" className="form-control py-2" placeholder="Enter text here..." />
                                         <div className="input-group-prepend pt-0">
@@ -70,10 +90,10 @@ export default function Search({ userImage, userName, userAge, cardName }) {
             </div>
 
             <div className="col-lg-7 d-lg-block d-none pt-0">
-                <div className="card pb-9 pt-0 px-6 border-0 rounded-0 card-common overflow-auto contain-info">
+                <div className="card pb-10 pt-0 px-6 border-0 rounded-0 card-common overflow-y-scroll mh-100 h-100 vh-98">
                     <div className="card-body pt-0">
                         <div>
-                            <div className="text-left text-secondary">
+                            <div className="text-left text-secondary pb-6">
                                 {createSideCards()}
                             </div>
                         </div>

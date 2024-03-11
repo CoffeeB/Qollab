@@ -37,12 +37,12 @@ export default function Nav() {
                   <div className="sidebar-heading mt-4">
                         <Link href='/profile'>
                             <div className={`${router.pathname === '/profile' ? 'border rounded-circle p-0':''}`}>
-                                <img src="/Blank_Profile.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar avatar-xl rounded-circle" />
+                                <img src="/Blank_Profile.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar avatar-lg rounded-circle" />
                             </div>
                         </Link>
                   </div>
                   {/* <!-- Heading --> */}
-                  <div className="sidebar-heading mb-5 mt-3">
+                  <div className="sidebar-heading mb-6 mt-4">
                     <li className={`nav-item my-2 ${router.pathname === '/home' || router.pathname === '/viewProfile' ? 'text-danger' : 'text-grey'}`} data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
                         <Link href={'/home'} className="nav-link">
                             <i className="bx bxs-home-alt-2 display-6" />

@@ -5,8 +5,8 @@ export default function ViewProfile() {
     
   return (
     <>
-        <div className="row pt-5 vh-98 mh-100 overflow-hidden">
-            <div className="card border-0 border-grey overflow-hidden rounded-0 col-6 p-0 pe-0 border-end">
+        <div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-auto vh-100">
+            <div className="card border-0 border-grey rounded-0 col-lg-6 col-sm-12 p-0 pt-lg-5 pt-sm-0 pe-0 border-end">
                 <div className="card-common">
                     <div className="card-body">
                         <div className="d-flex flex-column justify-content-between">
@@ -36,7 +36,7 @@ export default function ViewProfile() {
                     </div>
                 </div>
             </div>
-            <div className="card border-0 rounded-0 col-6 p-0 ps-0 overflow-x-hidden contain-info">
+            <div className="card border-0 rounded-0 col-lg-6 col-sm-12 p-0 ps-0 pb-5 overflow-x-hidden vh-100">
                 <ViewedProfileDetails />
             </div>
         </div>

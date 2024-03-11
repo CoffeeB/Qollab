@@ -9,7 +9,8 @@ const generateFilters = () => {
       type: "dropdown",
       label: "Looking for a relationship with",
       name: "search",
-      options: ["Men", "Women", "Gay", "Transgender"]
+      options: ["Men", "Women", "Gay", "Transgender"],
+      id: 1
     },
     {
         type: "dropdown",
@@ -23,31 +24,41 @@ const generateFilters = () => {
             { min: 50, max: 57 },
             { min: 58, max: 65 },
             { min: 66, max: 73 }
-        ]
+        ],
+        id: 2
     },
     {
       type: "dropdown",
       label: "Distance",
       name: "distance",
-      options: ["100Km", "500Km", "1000Km"]
+      options: ["100Km", "500Km", "1000Km"],
+      id: 3
     },
     {
       type: "dropdown",
       label: "Height",
       name: "height",
-      options: ["Option 1", "Option 2", "Option 3"]
+      options: [
+        { min: 3, max: 4 },
+        { min: 4.1, max: 5 },
+        { min: 5.1, max: 6 },
+        { min: 6.1, max: 7 }
+    ],
+    id: 4
     },
     {
       type: "radio",
       label: "Looking for someone who is financially independent?",
       name: "finance",
-      options: ["Yes", "No", "Doesn't Matter"]
+      options: ["Yes", "No", "Doesn't Matter"],
+      id: 5
     },
     {
       type: "checkbox",
       label: "Other",
       name: "other",
-      options: ["Has photos", "Has face pictures", "Has album(s)"]
+      options: ["Has photos", "Has face pictures", "Has album(s)"],
+      id: 6
     }
   ];
 };
@@ -58,11 +69,11 @@ export default function FilterPage() {
   return (
     <>
       <Nav />
-      <section className="z-n1 ps-10 bg-black">
+      <section className="z-n1 ps-lg-10 px-sm-2 bg-black">
         <div className="container-fluid">
           <div className="row " data-bs-theme="dark">
             <PageHeader text={"Filter"} />
-            <div className='other-contain-info w-100'>
+            <div className='vh-85 mh-100 h-100 overflow-hidden w-100'>
               <Filter filters={filters} />
             </div>
           </div>

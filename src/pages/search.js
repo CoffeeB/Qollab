@@ -7,12 +7,12 @@ export default function search() {
   return (
     <>
       <Nav />
-      <section className=" z-n1 ps-10 bg-black">
+      <section className=" z-n1 ps-lg-10 px-sm-2 bg-black">
         <div className="container-fluid">
           <div className="row">
             <PageHeader text={"Search"} />
-            <div className='other-contain-info'>
-                <Search />
+            <div className='vh-85 mh-100 h-100 overflow-y-hidden'>
+              <Search />
             </div>
           </div>
         </div>
