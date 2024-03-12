@@ -7,7 +7,7 @@ import login from '@/utils/login';
 
 const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
     const router = useRouter();
-    const [verificationCode, setVerificationCode] = useState(['', '', '', '']);
+    const [verificationCode, setVerificationCode] = useState(['', '', '', '', '', '']);
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const [isResendButtonDisabled, setIsResendButtonDisabled] = useState(false);
     const inputRefs = [useRef(), useRef(), useRef(), useRef()];
@@ -24,14 +24,23 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
             const newVerificationCode = [...verificationCode];
             newVerificationCode[index] = value;
             setVerificationCode(newVerificationCode);
-
-            if (value === '' && index > 0) {
-                inputRefs[index - 1].current.focus();
-            } else if (index < inputRefs.length - 1 && value !== '') {
-                inputRefs[index + 1].current.focus();
+    
+            if (value === '') {
+                // Move to the previous input field if the value is empty
+                if (index > 0 && inputRefs[index - 1]) {
+                    inputRefs[index - 1].current.focus();
+                }
+            } else {
+                // Move to the next input field if the value is not empty
+                if (index < inputRefs.length - 1) {
+                    inputRefs[index + 1].current.focus();
+                }
             }
         }
     };
+    
+    
+    
 
     const handleRedirect = () => {
         router.push("/home");
@@ -131,7 +140,7 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
             <form onSubmit={handleFormSubmit} className="form-goup">
                 <div className="row mx-lg-4 mx-2 mb-3 py-2">
                     {verificationCode.map((digit, index) => (
-                        <div key={index} className="col-3 px-1 mb-2 border-0">
+                        <div key={index} className="col-md-2 col-sm-2 px-1 mb-2 border-0">
                             <input
                                 type="text"
                                 className="form-control form-control-lg text-center border-2 border-primary"

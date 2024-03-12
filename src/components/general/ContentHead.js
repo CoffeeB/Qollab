@@ -11,7 +11,7 @@ const ContentHead = ({ text, otherText, className }) => {
 
 ContentHead.propTypes = {
     text: PropTypes.string.isRequired,
-    otherText: PropTypes.string.isRequired, // Add prop type validation for otherText
+    otherText: PropTypes.string, // Add prop type validation for otherText
     className: PropTypes.string // Add prop type validation for className
 };
 
