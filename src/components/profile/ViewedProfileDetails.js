@@ -32,12 +32,12 @@ export default function ViewedProfileDetails() {
                     </div>
                 </div>
             </div>
-            <div class="w-10 d-flex flex-column mb-3 col-11 align-items-end position-fixed end-0 me-1 bottom-0">
+            <div class="w-10 d-flex flex-column mb-lg-3 mb-sm-10 col-11 align-items-end position-fixed end-0 me-1 bottom-0">
                 <div class="text-left">
-                    <button class="my-2 border-0 bg-success rounded-3 fs-6 text-white p-md-3 p-sm-2"><i className="bx bxs-phone display-7" data-bs-toggle="tooltip" data-bs-placement="top" title="Get Contact Details" /></button>
+                    <button class="my-2 border-0 bg-white rounded-3 fs-6 p-md-3 p-sm-2"><i className="bx bxs-phone display-7 text-danger " data-bs-toggle="tooltip" data-bs-placement="top" title="Get Contact Details" /></button>
                 </div>
                 <div class="text-left">
-                <button class="my-2 border-0 bg-warning rounded-3 fs-6 text-white p-md-3 p-sm-2"><i className="bx bxs-crown display-7" data-bs-toggle="tooltip" data-bs-placement="top" title="Go Premium"/></button>
+                <button class="my-2 border-0 bg-white rounded-3 fs-6 p-md-3 p-sm-2"><i className="bx bxs-crown display-7 text-danger " data-bs-toggle="tooltip" data-bs-placement="top" title="Go Premium"/></button>
                 </div>
             </div>
         </div>

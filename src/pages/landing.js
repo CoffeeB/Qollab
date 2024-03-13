@@ -16,7 +16,7 @@ export default function Landing() {
     }
     
     const redirectToProfiles = () => {
-      router.push('/home')
+      router.push('/')
     }
   return (
     <>

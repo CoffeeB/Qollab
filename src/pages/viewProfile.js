@@ -1,14 +1,18 @@
 import React, {  } from 'react';
 import Nav from '@/components/profile/Nav';
 import ViewProfile from '@/components/profile/ViewProfile';
+import useAuth from '@/hooks/useAuth';
 
 export default function viewProfile() {
+  const { isAuthenticated } = useAuth();
+  console.log(isAuthenticated);
+
   return (
     <>
-      <Nav />
-      <section className=" z-n1 ps-lg-10 ps-sm-0 py-sm-0">
+      <Nav isAuthenticated={isAuthenticated}/>
+      <section className=" z-n1 ps-lg-10 ps-sm-0 py-sm-0 pb-lg-0 pb-sm-10">
         <div className="container-fluid">
-        <div className="row overflow-hidden vh-100">
+        <div className="row overflow-y-auto overflow-x-hidden vh-100">
           <div>
             <ViewProfile />
           </div>
@@ -18,3 +22,18 @@ export default function viewProfile() {
     </>
   );
 }
+
+export async function getServerSideProps(context) {
+  const { req } = context;
+  const authToken = req.cookies.authToken;
+
+  // Check if the authToken exists
+  const isAuthenticated = !!authToken;
+
+  return {
+      props: {
+          isAuthenticated,
+      },
+  };
+}
+

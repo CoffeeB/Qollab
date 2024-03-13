@@ -12,7 +12,7 @@ export default function Profile() {
     const handleStepChange = (step) => {
         setActiveStep(step);
     }
-
+    
     const isPremiumMember = () => {
         const userIsPremium = true;
         setPremiumMember(userIsPremium);
@@ -22,10 +22,10 @@ export default function Profile() {
     <>
         {activeStep === 'edit' && <ProfileEdit handleStepChange={handleStepChange} />}
         {(activeStep === 'details' || activeStep === 'settings') && 
-        (<div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-auto vh-100">
+        (<div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-auto pb-lg-0 pb-sm-10 vh-100">
             <div className="card border-0 border-grey rounded-0 col-md-4 p-0 pe-0 border-end h-100">
                 <div className="card-common overflow-y-scroll mh-100 h-100">
-                    <div className="card-body">
+                    <div className="card-body pt-2">
                         <div className="d-flex flex-column justify-content-between">
                             <ProfileUpperSect premiumMember={premiumMember}/>
                             <div className="d-flex flex-column justify-content-center">

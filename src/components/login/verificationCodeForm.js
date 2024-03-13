@@ -43,7 +43,7 @@ const VerificationCodeForm = ({ email, password, onSuccess, isSignup }) => {
     
 
     const handleRedirect = () => {
-        router.push("/home");
+        router.push("/");
     }
 
     const handleVerification = async (e) => {

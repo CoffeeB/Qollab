@@ -8,12 +8,12 @@ const handleRedirect = (user_type) => {
         //     windows.location = "/therapist/dashboard";
         // break;
         case 2:
-            windows.location = "/home";
+            window.location = "/";
         break;
         // Add more cases as needed for different user types
         default:
         // Redirect to a default dashboard if user_type is not recognized
-        windows.location = '/home';
+        window.location = '/';
         break;
     }
 };

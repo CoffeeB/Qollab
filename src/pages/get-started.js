@@ -46,7 +46,7 @@ export default function GetStarted() {
 
             // Check if passwords match
             if (formData.password !== formData.confirmPassword) {
-                throw new Error('Passwords do not match');
+                setError('Passwords do not match');
             }
 
             // Construct the data object with default values
@@ -68,13 +68,13 @@ export default function GetStarted() {
             // If signup is successful, show the VerificationCodeForm
             setShowVerificationCodeForm(true);
         } catch (error) {
-            const api_errors = error?.response?.data.errors;
+            const api_errors = error?.response?.data?.errors;
             if (api_errors) {
               setValidationErrors(transformErrors(api_errors));
             }
             // setError(transformErrors(api_errors));
             setError(error?.response?.data?.message || "An unexpected error occurred. Please try again later.");
-            console.error("Error during form submission:", error);
+            // console.error("Error during form submission:", error);
         } finally {
             setIsLoading(false);
         }
@@ -85,8 +85,8 @@ export default function GetStarted() {
             <div className='head-container'>
                 <Header />
             </div>
-            <section className="row justify-content-center py-2">
-                <div className='col-md-12 vh-80 mh-100 overflow-auto'>
+            <section className="row justify-content-center py-2 vh-80 mh-100 overflow-auto">
+                <div className='col-md-12'>
                     <div className='row'>
                         <ContentHead text={'Create an Account'} className={'fs-3 text-center fw-bold'} />
                         <p className='text-danger text-center fs-base mt-1 fw-bold'>Sign Up</p>
@@ -143,14 +143,15 @@ export default function GetStarted() {
                                         />
                                         {validationErrors.confirmPassword && (
                                             <div className="invalid-feedback">
-                                            {validationErrors.confirmPassword}
+                                                {validationErrors.confirmPassword}
                                             </div>
                                         )}
                                     </div>
                                     {error && (
                                         <div className="mt-2 alert alert-danger alert-dismissible fade show border-0 border-3 rounded-0 border-top shadow border-danger" role="alert">
-                                            <span className="fs-sm text-danger">{error}.</span>
-                                        </div>
+                                        <span className="fs-sm text-danger">{error}.</span>
+                                        <button className="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close" onClick={() => setError("")}></button>
+                                      </div>
                                     )}
                                     <div className="my-3">
                                         <Button type='submit' performAction={handleSubmit} text={isLoading ? "Signing Up..." : "Sign Up"} className='fw-bold fs-4 w-100 rounded-2 btn-white' disabled={isLoading} />

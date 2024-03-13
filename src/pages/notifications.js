@@ -2,11 +2,15 @@ import React, {  } from 'react';
 import Nav from '@/components/profile/Nav';
 import PageHeader from '@/components/general/PageHeader';
 import Link from 'next/link';
+import useAuth from '@/hooks/useAuth';
 
 export default function Notifications() {
+  const { isAuthenticated } = useAuth();
+  console.log(isAuthenticated);
+
   return (
     <>
-      <Nav />
+      <Nav isAuthenticated={isAuthenticated}/>
       <section className=" z-n1 ps-lg-10 ps-sm-1">
         <div className="container-fluid">
           <div className="row overflow-hidden vh-99">
@@ -42,4 +46,18 @@ export default function Notifications() {
       </section>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { req } = context;
+  const authToken = req.cookies.authToken;
+
+  // Check if the authToken exists
+  const isAuthenticated = !!authToken;
+
+  return {
+      props: {
+          isAuthenticated,
+      },
+  };
 }

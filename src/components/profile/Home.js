@@ -71,10 +71,10 @@ export default function Home({ userImage, userAge, userName, cardName, className
 
     return (
     <div className="row pt-lg-5 ps-3 mt-lg-3 pt-sm-0 mt-sm-0 pe-0">
-                
+
         <div className="col-lg-9 p-0 col-sm-12">
-            <div className="card border-0 py-lg-5 py-sm-0 rounded-0 card-common overflow-auto vh-100">
-                <div className="card-body">
+            <div className="card border-0 py-lg-5 py-sm-0 pb-sm-10 rounded-0 card-common overflow-auto overflow-x-hidden vh-100">
+                <div className="card-body pe-sm-2">
                     <div className="d-flex flex-column">
                         <div className="text-center mt-lg-10 mt-sm-0 d-flex flex-column align-items-center">
                             <div className='d-flex flex-column align-items-center'>
@@ -109,7 +109,7 @@ export default function Home({ userImage, userAge, userName, cardName, className
     
         <div className="col-lg-3 d-lg-block p-0 px-0 d-none">
             <div className="card col-12 py-5 pt-0 border-0 h-100 rounded-0 card-common overflow-auto vh-100">
-                <div className="card-body px-3 pt-0">
+                <div className="card-body px-3 pt-3">
                     <div>
                         <div className="text-left text-secondary">
                             {createSideCards()}

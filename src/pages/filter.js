@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from '@/components/profile/Nav';
 import Filter from '@/components/filter/Filter';
 import PageHeader from '@/components/general/PageHeader';
+import useAuth from '@/hooks/useAuth';
 
 const generateFilters = () => {
   return [
@@ -65,10 +66,12 @@ const generateFilters = () => {
 
 export default function FilterPage() {
   const filters = generateFilters();
+  const { isAuthenticated } = useAuth();
+  console.log(isAuthenticated);
 
   return (
     <>
-      <Nav />
+      <Nav isAuthenticated={isAuthenticated}/>
       <section className="z-n1 ps-lg-10 px-sm-2 bg-black">
         <div className="container-fluid">
           <div className="row " data-bs-theme="dark">
@@ -81,4 +84,18 @@ export default function FilterPage() {
       </section>
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { req } = context;
+  const authToken = req.cookies.authToken;
+
+  // Check if the authToken exists
+  const isAuthenticated = !!authToken;
+
+  return {
+      props: {
+          isAuthenticated,
+      },
+  };
 }

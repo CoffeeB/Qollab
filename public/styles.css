@@ -124,6 +124,10 @@ a span{
     height: 100%;
 }
 
+.list-style-dot {
+    list-style: disc;
+}
+
 .side-card {
     min-height: 525px !important;
     max-height: 525px !important;
