@@ -8,7 +8,7 @@ const handleRedirect = (user_type) => {
         //     windows.location = "/therapist/dashboard";
         // break;
         case 2:
-            window.location = "/";
+            window.location = "/onboarding";
         break;
         // Add more cases as needed for different user types
         default:

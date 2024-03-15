@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import ProfileUpperSect from '@/components/profile/ProfileUpperSect'
 import { Button } from '@/components/general/Button'
 import ProfileDetails from '@/components/profile/ProfileDetails'
@@ -8,6 +8,17 @@ import ProfileEdit from '@/components/profile/ProfileEdit'
 export default function Profile() {
     const [activeStep, setActiveStep] = useState('details');
     const [premiumMember, setPremiumMember] = useState(false);
+    const detailsRef = useRef(null);
+    const settingsRef = useRef(null);
+
+    useEffect(() => {
+        if (activeStep === 'details' && detailsRef.current) {
+            detailsRef.current.scrollIntoView({ behavior: 'smooth' });
+        } else if (activeStep === 'settings' && settingsRef.current) {
+            settingsRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, [activeStep]);
+
 
     const handleStepChange = (step) => {
         setActiveStep(step);
@@ -22,10 +33,10 @@ export default function Profile() {
     <>
         {activeStep === 'edit' && <ProfileEdit handleStepChange={handleStepChange} />}
         {(activeStep === 'details' || activeStep === 'settings') && 
-        (<div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-auto pb-lg-0 pb-sm-10 vh-100">
-            <div className="card border-0 border-grey rounded-0 col-md-4 p-0 pe-0 border-end h-100">
+        (<div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-y-sm-hidden pb-0 vh-lg-100">
+            <div className="card border-0 border-grey rounded-0 col-lg-4 p-0 pe-0 border-end h-lg-100 h-md-75">
                 <div className="card-common overflow-y-scroll mh-100 h-100">
-                    <div className="card-body pt-2">
+                    <div className="card-body pt-lg-5 pt-sm-2">
                         <div className="d-flex flex-column justify-content-between">
                             <ProfileUpperSect premiumMember={premiumMember}/>
                             <div className="d-flex flex-column justify-content-center">
@@ -66,9 +77,9 @@ export default function Profile() {
                     </div>
                 </div>
             </div>
-            <div className="card border-0 rounded-0 col-md-8 p-0 ps-0 overflow-x-hidden pb-5 h-100">
-                {activeStep === 'details' && <ProfileDetails />}
-                {activeStep === 'settings' && <ProfileSettings />}
+            <div className="card border-0 rounded-0 col-lg-8 p-0 ps-0 overflow-x-hidden h-lg-100">
+                {activeStep === 'details' && <ProfileDetails ref={detailsRef}/>}
+                {activeStep === 'settings' && <ProfileSettings ref={settingsRef}/>}
             </div>
         </div>)
         }

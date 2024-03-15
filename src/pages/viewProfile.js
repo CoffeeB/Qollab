@@ -10,9 +10,9 @@ export default function viewProfile() {
   return (
     <>
       <Nav isAuthenticated={isAuthenticated}/>
-      <section className=" z-n1 ps-lg-10 ps-sm-0 py-sm-0 pb-lg-0 pb-sm-10">
+      <section className=" z-n1 ps-lg-10 ps-sm-0 py-sm-0 pb-0">
         <div className="container-fluid">
-        <div className="row overflow-y-auto overflow-x-hidden vh-100">
+        <div className="row overflow-y-lg-hidden overflow-y-sm-auto overflow-x-hidden vh-lg-100 pb-3">
           <div>
             <ViewProfile />
           </div>

@@ -4,6 +4,7 @@ import EditableField from './EdditableField'
 
 export default function ProfileEdit({ handleStepChange }) {
     const [formData] = useState( new FormData())
+    const [editField, setShowEditField] = useState(false);
     const [userProfile, setUserProfile] = useState({ 
         name: '',
         phone_number: '',
@@ -33,7 +34,7 @@ export default function ProfileEdit({ handleStepChange }) {
     }
 
   return (
-    <div className="row pt-5 mt-3 overflow-auto vh-100">
+    <div className="row pt-lg-5 mt-lg-3 overflow-auto vh-100">
         <div className="card border-0 border-grey rounded-0 col-lg-4 col-md-6 col-sm-12 me-0 p-2 pt-0 pe-0 border-end">
             <div className="card-common">
                 <div className="card-body">
@@ -52,7 +53,7 @@ export default function ProfileEdit({ handleStepChange }) {
                                 <div className="d-flex mb-3 mt-4 flex-column">
                                     <span className="fw-bold d-flex align-items-center justify-content-between">
                                         <h4 className='text-white mb-0'>Contact info</h4>
-                                        <i class='cursor-pointer bx bxs-pencil display-7'  onClick={openEditField}/>
+                                        <i className='cursor-pointer bx bxs-pencil display-7'  onClick={openEditField}/>
                                     </span>
                                     <span className="d-flex align-items-center w-100">
                                         <div className='d-flex justify-content-between w-85'>

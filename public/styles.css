@@ -110,20 +110,6 @@ a span{
     max-height: 25rem !important;
 }
 
-.featured-card {
-    max-width: 10rem;
-    max-height: 50rem;
-    width: 100%;
-    height: 100%;
-}
-
-.featured-card img{
-    max-width: 10rem;
-    max-height: 10rem;
-    min-height: 10rem;
-    height: 100%;
-}
-
 .list-style-dot {
     list-style: disc;
 }

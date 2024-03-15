@@ -16,8 +16,8 @@ export default function Notifications() {
           <div className="row overflow-hidden vh-99">
             <PageHeader text={'Notifications'}/>
             <div className='p-0'>
-                <div className='row p-0 overflow-auto vh-80'>
-                  <div className='col-md-6 col-sm-12 border-1 border-end border-grey bg-dark p-0'>
+                <div className='row p-0 overflow-auto vh-lg-80 vh-md-100 vh-lg-100'>
+                  <div className='col-md-6 col-sm-12 border-1 border-end border-grey bg-black-2 p-0'>
                     <p className='fs-md-3 fs-sm-5 text-danger fw-bold px-5'>Today</p>
                     <div className='d-flex align-items-end border-bottom border-white border-1 justify-content-between px-6 pb-2 '>
                       <div>

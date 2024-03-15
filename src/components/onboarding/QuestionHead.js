@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
-const QuestionHead = ({text, otherText}) => {
+const QuestionHead = ({text, otherText, textClass, otherTextClass}) => {
     return (
         <>
-            <p className='question-header'>{text}</p>
-            <p className='question-header customizable-text'>{otherText}</p>
+            <h4 className={`question-header ${textClass}`} style={{fontFamily: 'auto'}}>{text}</h4>
+            <h4 className={`question-header customizable-text ${otherTextClass}`}>{otherText}</h4>
         </>
     )
 }

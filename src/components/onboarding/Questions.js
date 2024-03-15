@@ -1,7 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
 
-const Questions = ({ questions }) => {
+const Questions = ({ question}) => {
+    console.log("Questionnnn", question);
     const [entries, setEntries] = useState();
 
     
@@ -30,11 +31,11 @@ const Questions = ({ questions }) => {
     };
 
     const renderQuestionInput = (question) => {
-        switch (question.type) {
+        switch (question?.type) {
             case "radio":
                 return(
                     <div>
-                        {question.options.map((option, index) => (
+                        {question?.options.map((option, index) => (
                             <div className='row mb-4 me-7 flex-row-reverse flex-nowrap justify-content-end text-grey' key={index}>
                                 <input 
                                     className='form-control  form-check-input'
@@ -51,7 +52,7 @@ const Questions = ({ questions }) => {
             case "dropdown":
                 return (
                     <select className='form-select border-1 border-light text-light rounded-1' data-bs-theme="dark" id={`question-${question.id}`}>
-                        {question.options.map((option, index) => (
+                        {question?.options.map((option, index) => (
                             <option key={index} value={option}>{option}</option>
                         ))}
                     </select>
@@ -59,7 +60,7 @@ const Questions = ({ questions }) => {
             case "checkbox":
                 return (
                     <div>
-                        {question.options.map((option, index) => (
+                        {question?.options.map((option, index) => (
                             <div key={index}>
                                 <input 
                                     className='form-control'
@@ -119,14 +120,25 @@ const Questions = ({ questions }) => {
         }
     }
 
+    // return (
+    //     <div className='q-form d-grid justify-content-center align-items-center'>
+    //         {questions.map((question) => (
+    //             <div className='d-grid' key={question.id}>
+    //                 <label className='mb-5 fs-2 text-light content-text text-start' htmlFor={`question-${question.id}`}>{question.label}</label>
+    //                 {renderQuestionInput(question)}
+    //             </div>
+    //         ))}
+    //     </div>
+    // );
+
     return (
         <div className='q-form d-grid justify-content-center align-items-center'>
-            {questions.map((question) => (
-                <div className='d-grid' key={question.id}>
-                    <label className='mb-5 fs-2 text-light content-text text-start' htmlFor={`question-${question.id}`}>{question.label}</label>
-                    {renderQuestionInput(question)}
-                </div>
-            ))}
+            <div className='d-grid'>
+                <label className='mb-5 fs-2 text-light content-text text-start' htmlFor={`question-${question?.id}`}>
+                    {question?.label}
+                </label>
+                {renderQuestionInput(question)}
+            </div>
         </div>
     );
 };

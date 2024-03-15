@@ -3,26 +3,26 @@ import React from 'react'
 export default function ProfileSettings() {
   return (
 
-        <div className="card border-0 rounded-0 card-common">
+        <div className="card border-0 rounded-0 card-common pb-lg-0 pb-sm-10">
             <div className="card-body">
                 <div className="row">
                     <div className="text-left text-secondary pt-4 col-12 px-3 d-flex flex-column justify-content-between">
                         <h1 className='m-0 text-danger fs-3 fw-light mb-3'>Settings</h1>
                         <div className='mt-4 mb-8 px-3'>
                             <div className='py-4 px-0 form-check form-switch border-bottom d-flex justify-content-between align-items-center border-light'>
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <label className="form-check-label" for="flexCheckDefault">
                                 Available</label>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                             </div>
                             <div className='py-4 px-0 form-check form-switch border-bottom d-flex justify-content-between align-items-center border-light'>
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <label className="form-check-label" for="flexCheckDefault">
                                 App Appearance</label>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                             </div>
                             <div className='py-4 px-0 form-check form-switch border-bottom d-flex justify-content-between align-items-center border-light'>
-                            <label class="form-check-label" for="flexCheckDefault">
+                            <label className="form-check-label" for="flexCheckDefault">
                                 Notifications</label>
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                             </div>
                             <div className='py-4 px-0 border-bottom d-flex cursor-pointer justify-content-between align-items-center border-light'>
                                 <span className='p-0'>Change Password</span>

@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
+import Image from 'next/image';
 
 const SideCard = ({ userImage, userName, userAge, cardName, location, performAction }) => {
   return (
     <div onClick={() => performAction()} className="card side-card mb-0 border-0 p-2 h-100 bg-transparent">
         <div className='position-relative h-100 p-0'>        
             <div>
-                <img src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className=" object-fit-cover w-100 rounded-2" />
+                <Image src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className=" object-fit-cover w-100 rounded-2" width={500} height={500} />
             </div>
             <div onClick={() => performAction()} className='h-100 p-0 rounded-0 h-100 bg-gradient-top rounded-2 card-img-overlay w-100'>
                 <div className="position-absolute d-flex justify-content-between align-items-center bottom-0 start-5 translate-end-x bg-transparent w-100">

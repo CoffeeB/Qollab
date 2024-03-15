@@ -3,12 +3,12 @@ import Collapsibles from "@/components/profile/Collapsibles";
 import Modal from "../general/Modal";
 
 export default function ProfileDetails() {
-    const [ showLoginModal, setShowLoginModal ] = useState(false);
+    const [ showModal, setShowModal ] = useState(false);
     const maxQuestions = 11;
     let answeredQuestions = [];
 
     const handleModal = () => {
-        setShowLoginModal(true);
+        setShowModal(true);
     }
 
     // Generate the Featured components dynamically
@@ -22,7 +22,7 @@ export default function ProfileDetails() {
 
     return (
         <>
-            <div className="card border-0 overflow-y-scroll overflow-x-hidden mh-100 h-100 rounded-0 card-common">
+            <div className="card border-0 overflow-y-lg-scroll overflow-y-sm-hidden overflow-x-hidden mh-lg-100 h-lg-100 rounded-0 card-common">
                 <div className="card-body row">
                     <div className="d-flex col-12 flex-wrap justify-content-between">
                         <div className="text-left text-secondary">
@@ -41,9 +41,9 @@ export default function ProfileDetails() {
                         </div>
                     </div>
                 </div>
-                <div class="w-10 d-flex flex-column mb-lg-3 mb-sm-10 col-11 align-items-end position-fixed end-0 me-1 bottom-0">
-                    <div class="text-left">
-                        <button class="my-2 border-0 bg-dark rounded-3 fs-6 text-white p-md-3 p-sm-2" data-bs-toggle="tooltip" data-bs-placement="top" title="View Safety Tips" onClick={handleModal}><i className="bx bxs-shield text-danger display-7" /></button>
+                <div className="w-10 d-flex flex-column mb-lg-3 mb-sm-8 z-3 col-11 align-items-end position-fixed end-0 me-1 bottom-0">
+                    <div className="text-left">
+                        <button className="my-2 border-0 bg-dark rounded-3 fs-6 text-white p-md-3 p-sm-2" data-bs-toggle="tooltip" data-bs-placement="top" title="View Safety Tips" onClick={handleModal}><i className="bx bxs-shield text-danger display-7" /></button>
                     </div>
                 </div>
             </div>
@@ -51,14 +51,14 @@ export default function ProfileDetails() {
             <Modal
                 heading={'Safety tips'}
                 headingClass={'fs-2 text-secondary fw-bold'}
-                tipsClass={'text-secondary fs-5 my-2 list-style-dot'}
+                tipsClass={'text-secondary fs-5 my-2 fw-light list-style-dot'}
                 firstTip={'Always inform someone about your where about and plans before meeting anyone.'}
                 secondTip={'Always meet in an open space first!!!'}
                 thirdTip={'Remember to review your friends profile by writing about them so others who want to make friends with this person knows if they should or not.'}
                 firstBtnText={'Proceed'}
                 secondBtnClass={'d-none'}
-                setShowLoginModal={setShowLoginModal}
-                showLoginModal={showLoginModal} 
+                setShowModal={setShowModal}
+                showModal={showModal} 
             />
                 
         

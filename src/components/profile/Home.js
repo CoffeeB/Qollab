@@ -1,9 +1,10 @@
 import React from 'react'
-import { Featured, Top } from '@/components/profile/ProfileCards'
+import { Featured, FeaturedExtended, Top } from '@/components/profile/ProfileCards'
 import Footer from '@/components/profile/Footer';
 import SideCard from '@/components/profile/SideCards';
 import SectionHead from '@/components/profile/SectionHead';
 import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 export default function Home({ userImage, userAge, userName, cardName, className }) {
     const router = useRouter();
@@ -12,6 +13,23 @@ export default function Home({ userImage, userAge, userName, cardName, className
         router.push('/viewProfile');
     }
 
+    const createFeaturedProfilesExtended = () => {
+        const maxDispalyedProfiles = 18;
+        let featuredProfilesExtended = [];
+
+        // Generate the SideCard components dynamically
+        for (let i = 0; i < maxDispalyedProfiles; i++) {
+            featuredProfilesExtended.push(
+                <React.Fragment key={i}>
+                    <div key={i} className='row d-md-none d-block p-0 px-1'>
+                        <FeaturedExtended userImage={userImage} performAction={viewUserProfile}/>
+                    </div>
+                </React.Fragment>
+            );
+        }
+        return featuredProfilesExtended;
+    }
+    
     const createFeaturedProfiles = () => {
         const maxDispalyedProfiles = 18;
         let featuredProfiles = [];
@@ -25,8 +43,8 @@ export default function Home({ userImage, userAge, userName, cardName, className
                     </div>
                 </React.Fragment>
             );
-            return featuredProfiles;
         }
+        return featuredProfiles;
     }
 
     const createTopProfiles = () => {
@@ -42,9 +60,26 @@ export default function Home({ userImage, userAge, userName, cardName, className
                     </div>
                 </React.Fragment>
             );
-            return topProfiles;
         }
+        return topProfiles;
     }
+    
+    // const createTopProfilesExtended = () => {
+    //     const totalDispalyedProfiles = 6;
+    //     let topProfilesExtended = [];
+
+    //     // Generate the SideCard components dynamically
+    //     for (let i = 0; i < totalDispalyedProfiles; i++) {
+    //         topProfilesExtended.push(
+    //             <React.Fragment key={i}>
+    //                 <div key={i} className='d-md-none d-block p-0 px-1'>
+    //                     <TopExtended userImage={userImage} performAction={viewUserProfile} />
+    //                 </div>
+    //             </React.Fragment>
+    //         );
+    //     }
+    //         return topProfilesExtended;
+    // }
 
     const createSideCards = () => {
         const totalSideCards = 5;
@@ -83,7 +118,7 @@ export default function Home({ userImage, userAge, userName, cardName, className
                             </div>
                         </div>
                         <div onClick={viewUserProfile} className='position-relative d-flex mt-6 flex-column align-items-center'>
-                            <img src="/toa-heftiba-62H0SbdJUvI-unsplash.jpg" alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-4" />
+                            <Image src="/toa-heftiba-62H0SbdJUvI-unsplash.jpg" alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-4" width={500} height={500} />
                             <div className="position-absolute bottom-0 start-0 bg-transparent fs-5 p-3 w-lg-50 sm-w-100">
                                 <div className='text-uppercase mt-3 bg-danger w-lg-60 sm-w-100 px-3 fs-6 badge'>Reasns Profile of the day</div>
                                 <div className='mt-3 d-grid bg-black-2 p-3 fs-5 w-lg-60 sm-w-100'>
@@ -93,14 +128,16 @@ export default function Home({ userImage, userAge, userName, cardName, className
                             </div>
                         </div>
                     </div>
-                    <div className='row ps-3 align-items-center flex-wrap'>
+                    <div className='row-cols-sm-1 row-col-md-0 ps-md-0 align-items-center flex-wrap'>
                         {createFeaturedProfiles()}
+                        {createFeaturedProfilesExtended()}
                     </div>
-                    <div className='row border-4 ms-lg-2 my-2 border-start border-danger px-0 align-items-center flex-wrap'>
+                    <div className='row border-4 ms-lg-2 my-2 border-start border-danger px-0 align-items-center flex-wrap d-md-block d-none'>
                         <SectionHead text={"Top Models"}/>
                     </div>
                     <div className='row ps-3 align-items-center flex-wrap'>
                         {createTopProfiles()}
+                        {/* {createTopProfilesExtended()} */}
                     </div>
                 </div>
                 <Footer className="d-none d-md-block" />
@@ -108,7 +145,7 @@ export default function Home({ userImage, userAge, userName, cardName, className
         </div>
     
         <div className="col-lg-3 d-lg-block p-0 px-0 d-none">
-            <div className="card col-12 py-5 pt-0 border-0 h-100 rounded-0 card-common overflow-auto vh-100">
+            <div className="card col-12 py-5 pt-0 border-0 mh-100 h-100 rounded-0 card-common overflow-auto">
                 <div className="card-body px-3 pt-3">
                     <div>
                         <div className="text-left text-secondary">

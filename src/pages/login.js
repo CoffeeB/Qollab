@@ -46,10 +46,10 @@ export default function LoginPage() {
   //   // router.push("/account/profile");
   // }
 
-  const handleLogin = async (toke,user_type) => {
+  const handleLogin = async (toke) => {
     Cookies.set("authToken", toke);
     setToken(Cookies.get('authToken'));
-    handleRedirect(user_type);
+    handleRedirect();
 
     // router.push("/account/profile");
 
@@ -196,7 +196,7 @@ export default function LoginPage() {
                                   )}
                                   <a onClick={handleForgotPassword} className='text-danger fs-4 text-end w-100'>Forgot Password?</a>
                                   <div className="w-100 my-3">
-                                    <button type='submit'  className='btn btn-outline-danger fw-bold fs-4 w-100 rounded-2 btn-white '>{loginText}</button>
+                                    <button type='submit'  className='btn fw-bold fs-4 w-100 rounded-2 btn-white '>{loginText}</button>
                                   </div>
                                 </form>
                                 <span className='text-grey text-center fs-4 w-100'>Don't have an account? <a className='text-danger' onClick={redirectToSignup}>Sign Up</a></span>

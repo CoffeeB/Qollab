@@ -44,32 +44,32 @@ export default function Search({ userImage, userName, userAge, cardName }) {
                                 <div className="chat-history overflow-y-scroll overflow-x-hidden vh-70 h-100">
                                     <ul className="row mb-0 p-0 pt-2">
                                         <li className="clearfix list-unstyled mb-2 w-100">
-                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base bg-secondary rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
                                                 I'm looking for a partner
                                             </div>
                                         </li>
                                         <li className="clearfix list-unstyled mb-2 w-100">
-                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base bg-secondary rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
                                                 Project has been already finished and I have results to show you.
                                             </div>
                                         </li>
                                         <li className="clearfix list-unstyled mb-2 w-100">
-                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base bg-secondary rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
                                                 I'm looking for a partner
                                             </div>
                                         </li>
                                         <li className="clearfix list-unstyled mb-2 w-100">
-                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base bg-secondary rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
                                                 Project has been already finished and I have results to show you.
                                             </div>
                                         </li>
                                         <li className="clearfix list-unstyled mb-2 w-100">
-                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base bg-secondary rounded-bottom-5 mb-2 rounded-start-5 mw-60 float-end">
                                                 I'm looking for a partner
                                             </div>
                                         </li>
                                         <li className="clearfix list-unstyled mb-2 w-100">
-                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base text-grey bg-white rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
+                                            <div className="position-relative lh-2 fs-5 d-inline-block p-3 lh-base bg-secondary rounded-bottom-5 mb-2 rounded-end-5 mw-100 w-md-50 w-sm-50 float-start">
                                                 Project has been already finished and I have results to show you.
                                             </div>
                                         </li>
@@ -90,7 +90,7 @@ export default function Search({ userImage, userName, userAge, cardName }) {
             </div>
 
             <div className="col-lg-7 d-lg-block d-none pt-0">
-                <div className="card pb-10 pt-0 px-6 border-0 rounded-0 card-common overflow-y-scroll mh-100 h-100 vh-98">
+                <div className="card pt-0 px-6 border-0 rounded-0 card-common overflow-y-scroll mh-100 h-100 vh-98">
                     <div className="card-body pt-0">
                         <div>
                             <div className="text-left text-secondary pb-6">

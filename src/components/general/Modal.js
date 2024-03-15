@@ -1,15 +1,15 @@
 import React from 'react';
 
-const Modal = ({ showLoginModal, setShowLoginModal, handleLogin, firstBtnClass, secondBtnClass, heading, secondText, firstBtnText, secondBtnText, secondTextClass, headingClass, firstTip, secondTip, thirdTip, tipsClass }) => {
+const Modal = ({ showModal, setShowModal, firstBtnClass, secondBtnClass, heading, secondText, firstBtnText, secondBtnText, secondTextClass, headingClass, firstTip, secondTip, thirdTip, tipsClass, performAction }) => {
     return (
         <>
-            {showLoginModal && (
-                <div className="modal-backdrop fade show" onClick={() => setShowLoginModal(false)}>
+            {showModal && (
+                <div className="modal-backdrop fade show" onClick={() => setShowModal(false)}>
                     <div className="modal fade show d-flex align-items-center" tabIndex="-1" role="dialog">
                         <div className="modal-dialog modal-dialog-centered" role="document">
                             <div className="modal-content">
                                 <div className="modal-header pb-1 border-0">
-                                    <button type="button" className="btn-close" onClick={() => setShowLoginModal(false)} aria-label="Close"></button>
+                                    <button type="button" className="btn-close" onClick={() => setShowModal(false)} aria-label="Close"></button>
                                 </div>
                                 <div className="modal-body py-1 text-center">
                                     <span className={`modal-title ${headingClass}`}>
@@ -22,8 +22,8 @@ const Modal = ({ showLoginModal, setShowLoginModal, handleLogin, firstBtnClass, 
                                     
                                 </div>
                                 <div className="modal-footer border-0">
-                                    <button type="button" className={`btn rounded-3 ${firstBtnClass}`} onClick={handleLogin}>{firstBtnText}</button>
-                                    <button type="button" className={`btn rounded-3 ${secondBtnClass}`} onClick={() => setShowLoginModal(false)}>{secondBtnText}</button>
+                                    <button type="button" className={`btn btn-sm rounded-3 ${firstBtnClass}`} onClick={() => setShowModal(false)}>{firstBtnText}</button>
+                                    <button type="button" className={`btn btn-sm rounded-3 ${secondBtnClass}`} onClick={performAction}>{secondBtnText}</button>
                                 </div>
                             </div>
                         </div>

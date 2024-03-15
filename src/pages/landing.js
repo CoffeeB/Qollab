@@ -28,7 +28,7 @@ export default function Landing() {
           </div>
         </div>
       </div>
-      <section className="py-5">
+      <section className="p-lg-5">
           <div className="container">
               <div className="row bg-pattern rounded-3 p-7 px-2 pt-2 g-0">
                   <div className="col-xl-8 col-lg-10 whole-content offset-lg-1 col-md-12 col-sm-12">
