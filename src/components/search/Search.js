@@ -40,7 +40,7 @@ export default function Search({ userImage, userName, userAge, cardName }) {
                 <div className="border-0 rounded-0 card-common overflow-x-hidden vh-lg-98 vh-sm-85 mh-100 h-100">
                     <div className="card-body px-3">
                         <div className="chat-app">
-                            <div className="chat">
+                            <div className="chat pb-lg-0 pb-sm-3">
                                 <div className="chat-history overflow-y-scroll overflow-x-hidden vh-70 h-100">
                                     <ul className="row mb-0 p-0 pt-2">
                                         <li className="clearfix list-unstyled mb-2 w-100">
