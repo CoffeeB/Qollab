@@ -36,9 +36,9 @@
     width: 2.5rem;
 }
 .icon-lg {
-    height: 3rem;
+    height: 3rem !important;
     line-height: 3rem;
-    width: 3rem;
+    width: 3rem !important;
 }
 .icon-xl {
     height: 3.5rem;
@@ -9186,7 +9186,7 @@ fieldset:disabled .btn {
     opacity: 0.9 !important;
 }
 .opacity-100 {
-    opacity: 1 !important;
+    opacity: 1 !important;
 }
 .overflow-auto {
     overflow: auto !important;
@@ -12710,6 +12710,18 @@ fieldset:disabled .btn {
         border-bottom-left-radius: var(--bs-border-radius-pill) !important;
         border-top-left-radius: var(--bs-border-radius-pill) !important;
     }
+    .overflow-x-sm-hidden {
+        overflow: hidden;
+    }
+    .overflow-y-sm-hidden {
+        overflow: hidden !important;
+    }
+    .overflow-x-sm-auto {
+        overflow: auto;
+    }
+    .overflow-y-sm-auto {
+        overflow: auto;
+    }
 }
 @media (min-width: 576px) {
     .float-sm-start {
@@ -14117,18 +14129,6 @@ fieldset:disabled .btn {
     .rounded-start-sm-pill {
         border-bottom-left-radius: var(--bs-border-radius-pill) !important;
         border-top-left-radius: var(--bs-border-radius-pill) !important;
-    }
-    .overflow-x-sm-hidden {
-        overflow: hidden;
-    }
-    .overflow-y-sm-hidden {
-        overflow: hidden;
-    }
-    .overflow-x-sm-auto {
-        overflow: auto;
-    }
-    .overflow-y-sm-auto {
-        overflow: auto;
     }
 }
 @media (min-width: 768px) {
@@ -20645,7 +20645,7 @@ strong {
     z-index: 1;
 }
 .btn-scroll-top.active-progress {
-    transform: translateY(0);
+    transform: translateY(-50%);
     visibility: visible;
 }
 @media (min-width: 320px) {

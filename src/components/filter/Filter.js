@@ -42,11 +42,6 @@ export default function Filter({ userImage, userName, userAge, cardName, filters
                 <div className="border-0 rounded-0 card-common">
                     <div className="card-body px-3">
                         <Filters filters={filters}/>
-                        <div className="clearfix mt-3">
-                            <div className="input-group mb-0">
-                                <button className="input-group-text bg-danger py-2 cursor-pointer rounded-4 w-50 fw-bold">APPLY</button>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

@@ -128,14 +128,14 @@ export default function Home({ userImage, userAge, userName, cardName, className
                             </div>
                         </div>
                     </div>
-                    <div className='row-cols-sm-1 row-col-md-0 ps-md-0 align-items-center flex-wrap'>
+                    <div className='row ps-3'>
                         {createFeaturedProfiles()}
                         {createFeaturedProfilesExtended()}
                     </div>
-                    <div className='row border-4 ms-lg-2 my-2 border-start border-danger px-0 align-items-center flex-wrap d-md-block d-none'>
+                    <div className='row border-4 ms-lg-2 my-2 border-start border-danger px-0 d-md-block d-none'>
                         <SectionHead text={"Top Models"}/>
                     </div>
-                    <div className='row ps-3 align-items-center flex-wrap'>
+                    <div className='row ps-3'>
                         {createTopProfiles()}
                         {/* {createTopProfilesExtended()} */}
                     </div>

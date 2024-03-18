@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {forwardRef, useState} from "react";
 import Collapsibles from "@/components/profile/Collapsibles";
 import Modal from "../general/Modal";
 
-export default function ProfileDetails() {
+const ProfileDetails = forwardRef((props, ref) => {
     const [ showModal, setShowModal ] = useState(false);
     const maxQuestions = 11;
     let answeredQuestions = [];
@@ -22,7 +22,7 @@ export default function ProfileDetails() {
 
     return (
         <>
-            <div className="card border-0 overflow-y-lg-scroll overflow-y-sm-hidden overflow-x-hidden mh-lg-100 h-lg-100 rounded-0 card-common">
+            <div className="card border-0 overflow-y-lg-scroll overflow-y-sm-hidden overflow-x-hidden mh-lg-100 h-lg-100 rounded-0 card-common" ref={ref}>
                 <div className="card-body row">
                     <div className="d-flex col-12 flex-wrap justify-content-between">
                         <div className="text-left text-secondary">
@@ -41,9 +41,9 @@ export default function ProfileDetails() {
                         </div>
                     </div>
                 </div>
-                <div className="w-10 d-flex flex-column mb-lg-3 mb-sm-8 z-3 col-11 align-items-end position-fixed end-0 me-1 bottom-0">
+                <div className="w-10 d-flex flex-column mb-lg-3 mb-sm-8 z-3 col-11 align-items-end position-fixed end-0 me-lg-1 me-sm-8 bottom-0">
                     <div className="text-left">
-                        <button className="my-2 border-0 bg-dark rounded-3 fs-6 text-white p-md-3 p-sm-2" data-bs-toggle="tooltip" data-bs-placement="top" title="View Safety Tips" onClick={handleModal}><i className="bx bxs-shield text-danger display-7" /></button>
+                        <button className="my-2 border-0 bg-dark rounded-3 fs-6 text-white p-md-3 p-sm-2" data-bs-toggle="tooltip"data-bs-placement="top" title="View Safety Tips" onClick={handleModal}><i className="bx bxs-shield text-danger display-7" /></button>
                     </div>
                 </div>
             </div>
@@ -66,4 +66,6 @@ export default function ProfileDetails() {
 
     );
     
-}
+})
+
+export default ProfileDetails;

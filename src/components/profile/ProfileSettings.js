@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { forwardRef } from 'react'
 
-export default function ProfileSettings() {
+const ProfileSettings = forwardRef((props, ref) => {
   return (
 
-        <div className="card border-0 rounded-0 card-common pb-lg-0 pb-sm-10">
+        <div className="card border-0 rounded-0 card-common pb-lg-5 pb-sm-10" ref={ref}>
             <div className="card-body">
                 <div className="row">
                     <div className="text-left text-secondary pt-4 col-12 px-3 d-flex flex-column justify-content-between">
@@ -46,4 +46,6 @@ export default function ProfileSettings() {
             </div>
         </div>
   )
-}
+})
+
+export default ProfileSettings;

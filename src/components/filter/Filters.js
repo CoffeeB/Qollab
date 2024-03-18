@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import React from 'react';
+import { useRouter } from 'next/router';
 import CheckboxButton from '@/components/filter/CheckBoxButton';
 
 const Filters = ({ filters }) => {
     const [selectedFilters, setSelectedFilters] = useState({});
+    const router = useRouter();
 
     const handleFilterChange = (e, filterId) => {
         const { value, checked, type } = e.target;
@@ -11,6 +12,33 @@ const Filters = ({ filters }) => {
             ...prevState,
             [filterId]: type === 'checkbox' ? (checked ? value : '') : value
         }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = new FormData();
+
+        // Append selected filters to formData
+        Object.entries(selectedFilters).forEach(([key, value]) => {
+            formData.append(key, value);
+        });
+
+        try {
+            // Send formData to backend API
+            const response = await fetch('/api/save-filters', {
+                method: 'POST',
+                body: formData
+            });
+            if (response.ok) {
+                // Redirect to index page
+                router.push('/');
+            } else {
+                // Handle error
+                console.error('Failed to save filters');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
     };
 
     const renderFilterInput = (filter) => {
@@ -77,14 +105,19 @@ const Filters = ({ filters }) => {
     };
 
     return (
-        <div className='filters-container min-vh-70 vh-70 mh-100 overflow-auto d-grid justify-content-center align-items-center'>
+        <form className='filters-container vh-85 mh-100 overflow-auto d-grid justify-content-center align-items-center pb-5 px-2'>
             {filters.map((filter) => (
                 <div className='d-grid my-2' key={filter.id}>
                     <label className='mb-2 fs-5 text-light content-text text-start' htmlFor={`filter-${filter.id}`}>{filter.label}</label>
                     {renderFilterInput(filter)}
                 </div>
             ))}
-        </div>
+            <div className="clearfix mt-3">
+                <div className="input-group mb-0">
+                    <button className="input-group-text bg-danger py-2 cursor-pointer rounded-4 w-50 fw-bold">APPLY</button>
+                </div>
+            </div>
+        </form>
     );
 };
 

@@ -10,7 +10,7 @@ export default function EditUpper({handleStepChange}) {
             <Save className='text-danger' performAction={() => handleStepChange('details')} text={'Save'} />
         </div>
         <div className='d-flex my-3 flex-column align-items-center'>
-            <Image src="/Blank_Profile.jpg" alt="avatar" className="avatar avatar-xxl rounded-circle" width={20} height={20}/>
+            <Image src="/Blank_Profile.jpg" alt="avatar" className="avatar avatar-xxl rounded-circle" width={500} height={500}/>
             <a className='text-danger fs-3 mt-3'>Edit Photo</a>
         </div>
     </div>

@@ -82,89 +82,91 @@ export default function GetStarted() {
 
     return (
         <>
-            <div className='head-container'>
-                <Header />
-            </div>
-            <section className="row justify-content-center py-2 vh-80 mh-100 overflow-auto">
-                <div className='col-md-12'>
-                    <div className='row'>
-                        <ContentHead text={'Create an Account'} className={'fs-3 text-center fw-bold'} />
-                        <p className='text-danger text-center fs-base mt-1 fw-bold'>Sign Up</p>
-                        <div className='col-md-5 mx-auto'>
-                            <div className='row px-3'>
-                                <form className='form-group' onSubmit={handleSubmit}>
-                                    <div className='px-0 cursor-pointer'>
-                                        <label htmlFor='email' className='p-0 mt-4 mb-2'>Email Address</label>
-                                        <input
-                                            id='email'
-                                            type='email'
-                                            autoComplete='off'
-                                            name='email'
-                                            value={formData.email}
-                                            onChange={handleInputChange}
-                                            className={`${validationErrors.email ? 'is-invalid' : ''} form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 `}
-                                            placeholder='Email'
-                                        />
-                                        {validationErrors.email && (
-                                            <div className="invalid-feedback">
-                                            {validationErrors.email}
-                                            </div>
+            {!showVerificationCodeForm ? ( 
+            <> 
+                <div className='head-container'>
+                    <Header />
+                </div>
+                <section className="row justify-content-center py-2 vh-80 mh-100 overflow-auto">
+                    <div className='col-md-12'>
+                        <div className='row'>
+                            <ContentHead text={'Create an Account'} className={'fs-3 text-center fw-bold'} />
+                            <p className='text-danger text-center fs-base mt-1 fw-bold'>Sign Up</p>
+                            <div className='col-md-5 mx-auto'>
+                                <div className='row px-3'>
+                                    <form className='form-group' onSubmit={handleSubmit}>
+                                        <div className='px-0 cursor-pointer'>
+                                            <label htmlFor='email' className='p-0 mt-4 mb-2'>Email Address</label>
+                                            <input
+                                                id='email'
+                                                type='email'
+                                                autoComplete='off'
+                                                name='email'
+                                                value={formData.email}
+                                                onChange={handleInputChange}
+                                                className={`${validationErrors.email ? 'is-invalid' : ''} form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 `}
+                                                placeholder='Email'
+                                            />
+                                            {validationErrors.email && (
+                                                <div className="invalid-feedback">
+                                                {validationErrors.email}
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className='px-0'>
+                                            <label htmlFor='password' className='p-0 mt-4 mb-2'>Password</label>
+                                            <input
+                                                id='password'
+                                                type='password'
+                                                autoComplete='off'
+                                                name='password'
+                                                value={formData.password}
+                                                onChange={handleInputChange}
+                                                className={`${validationErrors.password ? 'is-invalid' : ''} form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 `}
+                                                placeholder='Password'
+                                            />
+                                            {validationErrors.password && (
+                                                <div className="invalid-feedback">
+                                                {validationErrors.password}
+                                                </div>
+                                            )}
+                                        </div>
+                                        <div className='px-0'>
+                                            <label htmlFor='confirmPassword' className='p-0 mt-4 mb-2'>Confirm Password</label>
+                                            <input
+                                                id='confirmPassword'
+                                                type='password'
+                                                autoComplete='off'
+                                                name='confirmPassword'
+                                                value={formData.confirmPassword}
+                                                onChange={handleInputChange}
+                                                className={`${validationErrors.confirmPassword ? 'is-invalid' : ''} form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 `}
+                                                placeholder='Confirm Password'
+                                            />
+                                            {validationErrors.confirmPassword && (
+                                                <div className="invalid-feedback">
+                                                    {validationErrors.confirmPassword}
+                                                </div>
+                                            )}
+                                        </div>
+                                        {error && (
+                                            <div className="mt-2 alert alert-danger alert-dismissible fade show border-0 border-3 rounded-0 border-top shadow border-danger" role="alert">
+                                            <span className="fs-sm text-danger">{error}.</span>
+                                            <button className="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close" onClick={() => setError("")}></button>
+                                        </div>
                                         )}
-                                    </div>
-                                    <div className='px-0'>
-                                        <label htmlFor='password' className='p-0 mt-4 mb-2'>Password</label>
-                                        <input
-                                            id='password'
-                                            type='password'
-                                            autoComplete='off'
-                                            name='password'
-                                            value={formData.password}
-                                            onChange={handleInputChange}
-                                            className={`${validationErrors.password ? 'is-invalid' : ''} form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 `}
-                                            placeholder='Password'
-                                        />
-                                        {validationErrors.password && (
-                                            <div className="invalid-feedback">
-                                            {validationErrors.password}
-                                            </div>
-                                        )}
-                                    </div>
-                                    <div className='px-0'>
-                                        <label htmlFor='confirmPassword' className='p-0 mt-4 mb-2'>Confirm Password</label>
-                                        <input
-                                            id='confirmPassword'
-                                            type='password'
-                                            autoComplete='off'
-                                            name='confirmPassword'
-                                            value={formData.confirmPassword}
-                                            onChange={handleInputChange}
-                                            className={`${validationErrors.confirmPassword ? 'is-invalid' : ''} form-control form-control-lg border-0 text-grey p-0 ps-2 bg-light text-light pb-1 border-bottom rounded-1 border-primary w-100 bg-transparent fs-4 `}
-                                            placeholder='Confirm Password'
-                                        />
-                                        {validationErrors.confirmPassword && (
-                                            <div className="invalid-feedback">
-                                                {validationErrors.confirmPassword}
-                                            </div>
-                                        )}
-                                    </div>
-                                    {error && (
-                                        <div className="mt-2 alert alert-danger alert-dismissible fade show border-0 border-3 rounded-0 border-top shadow border-danger" role="alert">
-                                        <span className="fs-sm text-danger">{error}.</span>
-                                        <button className="btn-close" type="button" data-bs-dismiss="alert" aria-label="Close" onClick={() => setError("")}></button>
-                                      </div>
-                                    )}
-                                    <div className="my-3">
-                                        <Button type='submit' performAction={handleSubmit} text={isLoading ? "Signing Up..." : "Sign Up"} className='fw-bold fs-4 w-100 rounded-2 btn-white' disabled={isLoading} />
-                                    </div>
-                                    <span className='text-grey text-center fs-base w-100'>Already have an account? <a className='text-danger' onClick={redirectToLogin}>Login</a></span>
-                                </form>
+                                        <div className="my-3">
+                                            <Button type='submit' performAction={handleSubmit} text={isLoading ? "Signing Up..." : "Sign Up"} className='fw-bold fs-4 w-100 rounded-2 btn-white' disabled={isLoading} />
+                                        </div>
+                                        <span className='text-grey text-center fs-base w-100'>Already have an account? <a className='text-danger' onClick={redirectToLogin}>Login</a></span>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            {/* Conditionally render the VerificationCodeForm */}
-            {showVerificationCodeForm && (
+                </section>
+            </>
+            ) : (
                 <VerificationCodeForm
                     email={formData.email}
                     password={formData.password}

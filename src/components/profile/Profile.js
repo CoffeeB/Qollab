@@ -5,7 +5,7 @@ import ProfileDetails from '@/components/profile/ProfileDetails'
 import ProfileSettings from '@/components/profile/ProfileSettings'
 import ProfileEdit from '@/components/profile/ProfileEdit'
 
-export default function Profile() {
+export default function Profile({ targetRef }) {
     const [activeStep, setActiveStep] = useState('details');
     const [premiumMember, setPremiumMember] = useState(false);
     const detailsRef = useRef(null);
@@ -34,9 +34,9 @@ export default function Profile() {
         {activeStep === 'edit' && <ProfileEdit handleStepChange={handleStepChange} />}
         {(activeStep === 'details' || activeStep === 'settings') && 
         (<div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-y-sm-hidden pb-0 vh-lg-100">
-            <div className="card border-0 border-grey rounded-0 col-lg-4 p-0 pe-0 border-end h-lg-100 h-md-75">
+            <div className="card border-0 border-grey rounded-0 col-lg-4 p-0 pe-0 border-end h-lg-100 h-md-75 ps-5 pt-3">
                 <div className="card-common overflow-y-scroll mh-100 h-100">
-                    <div className="card-body pt-lg-5 pt-sm-2">
+                    <div className="card-body pt-lg-5 pt-sm-2"   ref={targetRef}>
                         <div className="d-flex flex-column justify-content-between">
                             <ProfileUpperSect premiumMember={premiumMember}/>
                             <div className="d-flex flex-column justify-content-center">
@@ -50,34 +50,34 @@ export default function Profile() {
                                     </span>
                                 </div>
                                 <div className="d-flex mt-4 flex-column align-items-center justify-content-center">
-                                    <Button
-                                        className={`d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border ${ activeStep === 'details' ? 'active' : ''}`}
-                                        text={<>
-                                            <i className="bx bxs-user display-7 text-light"></i> Profile Details
-                                        </>} 
+                                    <a
+                                        className={`btn d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border ${ activeStep === 'details' ? 'active' : ''}`}
                                         performAction={() => handleStepChange('details')}
-                                    />
-                                    <Button
-                                        className={ `d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border ${ activeStep === 'settings' ? 'active' : ''}`}
-                                        text={<>
-                                            <i className="bx bx-cog display-7 me-3 text-light"></i> Settings
-                                        </>} 
+                                    >
+                                        <i className="bx bxs-user display-7 text-light"></i>
+                                        <span>Profile Details</span>
+                                    </a>
+                                    <a
+                                        className={`btn d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border ${ activeStep === 'settings' ? 'active' : ''}`}
                                         performAction={() => handleStepChange('settings')}
-                                    />
-                                    <Button
+                                    >
+                                        <i className="bx bx-cog display-7 me-3 text-light"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                    <a
                                         className={`d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border`}
-                                        text={<>
-                                            <i className="bx bxs-pencil display-7 me-2 text-light"></i> Edit Profile
-                                        </>}
                                         performAction={() => handleStepChange('edit')}
-                                    />
+                                    >
+                                        <i className="bx bxs-pencil display-7 me-2 text-light"></i>
+                                        <span>Edit Profile</span>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="card border-0 rounded-0 col-lg-8 p-0 ps-0 overflow-x-hidden h-lg-100">
+            <div className="card border-0 rounded-0 col-lg-8 p-0 ps-5 pt-3  overflow-x-hidden h-lg-100">
                 {activeStep === 'details' && <ProfileDetails ref={detailsRef}/>}
                 {activeStep === 'settings' && <ProfileSettings ref={settingsRef}/>}
             </div>

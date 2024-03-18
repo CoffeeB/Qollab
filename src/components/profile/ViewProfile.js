@@ -15,7 +15,7 @@ export default function ViewProfile() {
     
   return (
     <>
-        <div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-auto mh-100">
+        <div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-y-sm-hidden pb-0 vh-lg-100">
             <div className="card border-0 border-grey rounded-0 col-lg-6 col-sm-12 p-0 pt-sm-0 pe-0 border-end">
                 <div className="card-common">
                     <div className="card-body position-relative">
@@ -78,7 +78,7 @@ export default function ViewProfile() {
                     </div>
                 </div>
             </div>
-            <div className="card border-0 rounded-0 col-lg-6 col-sm-12 p-0 ps-0 pb-5 overflow-y-hidden overflow-x-hidden vh-100">
+            <div className="card border-0 rounded-0 col-lg-8 p-0 ps-0 overflow-x-hidden h-lg-100">
                 <ViewedProfileDetails />
             </div>
         </div>

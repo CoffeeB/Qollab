@@ -44,7 +44,7 @@ export default function Nav() {
                   <div className="sidebar-heading mt-4">
                         <Link href='/profile'>
                             <div className={`${router.pathname === '/profile' ? 'border rounded-circle p-0':''}`}>
-                                <Image src="/Blank_Profile.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar rounded-circle" width={20} height={20}/>
+                                <Image src="/Blank_Profile.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar rounded-circle" width={500} height={500}/>
                             </div>
                         </Link>
                   </div>
@@ -94,7 +94,7 @@ export default function Nav() {
                   <div className="sidebar-heading mt-4">
                         <a onClick={handleModal}>
                             <div className={`${router.pathname === '/profile' ? 'border rounded-circle p-0':''}`}>
-                                <Image src="/Blank_Profile.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar avatar-lg rounded-circle" width={20} height={20} />
+                                <Image src="/Blank_Profile.jpg" data-bs-toggle="tooltip" data-bs-placement="right" title="Profile" alt="avatar" className="avatar avatar-lg rounded-circle" width={500} height={500} />
                             </div>
                         </a>
                   </div>
@@ -132,7 +132,7 @@ export default function Nav() {
 
             <nav className="navbar py-1 fixed-bottom d-lg-none bg-dark navbar-light">
                 {isAuthenticated ? (
-                        <ul className="row w-100 navbar-nav p-0 bg-gradient-primary sidebar sidebar-dark">
+                        <ul className="row mx-1 w-100 navbar-nav p-0 bg-gradient-primary sidebar sidebar-dark">
                             <div className="d-flex justify-content-between m-0">
                                 <li className='nav-item' data-bs-toggle="tooltip" data-bs-placement="right" title="Home">
                                     <Link href={'/'} className="nav-link border-0 d-flex justify-content-center">

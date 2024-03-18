@@ -4,6 +4,7 @@ import Modal from '../general/Modal'
 import useAuth from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function ProfileUpperSect({ premiumMember }) {
   const [ showLoginModal, setShowLoginModal ] = useState(false);
@@ -31,13 +32,13 @@ export default function ProfileUpperSect({ premiumMember }) {
           <ul className="d-lg-none navbar-nav col-8 flex-row justify-content-end align-items-center bg-gradient-primary sidebar sidebar-dark">
             {isAuthenticated ? (<>
               <li className="nav-item col-2 mx-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Notifications">
-                <a onClick={handleModal} className="nav-link border-0">
+                <Link href={"/notifications"} className="nav-link border-0">
                   <i className="bx bx-bell display-6 bg-secondary rounded-circle p-2" />
-                </a>
+                </Link>
               </li><li className="nav-item col-2 mx-2" data-bs-toggle="tooltip" data-bs-placement="right" title="Likes">
-                  <a onClick={handleModal} className="nav-link border-0">
+                  <Link href={"/likes"} className="nav-link border-0">
                     <i className="bx bx-heart display-6 bg-secondary rounded-circle p-2" />
-                  </a>
+                  </Link>
                 </li><li className="nav-item col-2 mx-2 me-0" data-bs-toggle="tooltip" data-bs-placement="right" title="Log Out">
                   <a onClick={handleLogOut} className='nav-link border-0'>
                     <i className="bx bx-log-out text-danger display-6" />

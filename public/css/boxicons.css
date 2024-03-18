@@ -3362,7 +3362,7 @@
     content: "\ec5c";
   }
   .bx-up-arrow-alt:before {
-    content: "\ec5d";
+    /* content: "\ec5d"; */
   }
   .bx-up-arrow-circle:before {
     content: "\ec5e";

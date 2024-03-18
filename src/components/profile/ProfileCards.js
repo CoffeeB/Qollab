@@ -5,7 +5,7 @@ const Featured = ({ userImage, userName, distance, performAction }) => {
   return (
     <div onClick={() => performAction()} className="card mt-2 mb-2 border-0 bg-transparent">
         <div className='position-relative p-0 d-flex flex-column align-items-center'>        
-                <Image src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-2" width={50} height={50} />
+                <Image src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-2" width={300} height={200} />
             <div className='h-100 p-0 rounded-0 bg-gradient-cover rounded-bottom-2 card-img-overlay w-100'>
                 <div className="position-absolute top-0 start-5 translate-end-x bg-transparent w-100 opacity-65">
                     <div className='d-flex align-items-center justify-content-between p-2 w-100'>
@@ -29,9 +29,9 @@ const Featured = ({ userImage, userName, distance, performAction }) => {
 
 const FeaturedExtended = ({ userImage, userName, performAction, userAge, userLocation, userDesc }) => {
   return (
-    <div onClick={() => performAction()} className="card flex-row mt-2 mb-2 border-0 bg-transparent">
+    <div onClick={() => performAction()} className="card pe-0 flex-row mt-2 mb-2 border-0 bg-transparent">
         <div className='position-relative p-0 d-flex flex-column align-items-center'>        
-            <Image src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-2" width={300} height={300} />
+            <Image src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-2" width={300} height={200} />
             <div className='h-100 p-0 rounded-0 bg-gradient-cover rounded-bottom-2 card-img-overlay w-100'>
                 <div className="position-absolute top-0 start-5 translate-end-x bg-transparent w-100 opacity-65">
                     <div className='d-flex align-items-center justify-content-between p-2 w-100'>
@@ -55,6 +55,9 @@ const FeaturedExtended = ({ userImage, userName, performAction, userAge, userLoc
                 {userLocation || " Gwarimpa, Abuja"}
             </a>
             <p className='fs-7'>{userDesc || "I'm Luciana Peters  an artist, dreamer, and eternal seeker of beauty in every corner of life."}</p>
+            <button type="button" className=' rounded-3 p-1 btn-outline-danger w-50 fs-7 fw-light'>
+                Get Contact Details
+            </button>
         </div>
     </div>
   );
@@ -64,7 +67,7 @@ const Top = ({ userImage, userName, distance, performAction }) => {
     return (
         <div onClick={() => performAction()} className="card cursor-pointer p-0 mt-2 border-0 bg-transparent">
             <div className='position-relative p-0 d-flex flex-column align-items-center'>        
-                    <Image src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-2" width={500} height={500} />
+                    <Image src={userImage || '/toa-heftiba-62H0SbdJUvI-unsplash.jpg'} alt="profile" className="profile object-fit-cover profile-xxl w-100 rounded-bottom-2" width={300} height={200} />
                 <div className='h-100 p-0 bg-gradient-cover rounded-0 rounded-bottom-2 card-img-overlay w-100'>
                     <div className="position-absolute start-5 translate-end-x bg-transparent w-100 opacity-65">
                         <div className='d-flex align-items-center justify-content-between p-2 w-100'>
