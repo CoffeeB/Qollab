@@ -16,7 +16,7 @@ export default function ViewProfile() {
   return (
     <>
         <div className="row pt-lg-5 mt-lg-3 pt-sm-0 mt-sm-0 overflow-y-sm-hidden pb-0 vh-lg-100">
-            <div className="card border-0 border-grey rounded-0 col-lg-6 col-sm-12 p-0 pt-sm-0 pe-0 border-end">
+            <div className="card border-0 border-grey rounded-0 col-lg-4 col-sm-12 p-0 pt-sm-0 pe-0 border-end">
                 <div className="card-common">
                     <div className="card-body position-relative">
                         {/* Top icons */}

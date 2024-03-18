@@ -21,7 +21,7 @@ export default function Likes() {
                 <div className='d-flex align-items-center justify-content-between px-5 py-2'>
                   <div className='d-flex align-items-center'>
                     <div>
-                        <Image src="/denisse-alanis-jMCzvolvS0Q-unsplash.jpg" alt="" className='rounded-circle object-fit-cover avatar-xl mx-3'/>
+                        <Image src="/denisse-alanis-jMCzvolvS0Q-unsplash.jpg" alt="" className='rounded-circle object-fit-cover avatar-xl mx-3' width={500} height={500}/>
                     </div>  
                     <div>
                         <p className='text-white mb-0'>Jane doe liked your profile</p>
