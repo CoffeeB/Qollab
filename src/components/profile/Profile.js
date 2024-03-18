@@ -52,21 +52,21 @@ export default function Profile({ targetRef }) {
                                 <div className="d-flex mt-4 flex-column align-items-center justify-content-center">
                                     <a
                                         className={`btn d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border ${ activeStep === 'details' ? 'active' : ''}`}
-                                        performAction={() => handleStepChange('details')}
+                                        onClick={() => handleStepChange('details')}
                                     >
                                         <i className="bx bxs-user display-7 text-light"></i>
                                         <span>Profile Details</span>
                                     </a>
                                     <a
                                         className={`btn d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border ${ activeStep === 'settings' ? 'active' : ''}`}
-                                        performAction={() => handleStepChange('settings')}
+                                        onClick={() => handleStepChange('settings')}
                                     >
                                         <i className="bx bx-cog display-7 me-3 text-light"></i>
                                         <span>Settings</span>
                                     </a>
                                     <a
                                         className={`d-flex btn-s bg-transparent my-2 pe-7 p-4 w-75 text-center align-items-center justify-content-evenly text-danger rounded-2 fs-5 border`}
-                                        performAction={() => handleStepChange('edit')}
+                                        onClick={() => handleStepChange('edit')}
                                     >
                                         <i className="bx bxs-pencil display-7 me-2 text-light"></i>
                                         <span>Edit Profile</span>
@@ -78,8 +78,8 @@ export default function Profile({ targetRef }) {
                 </div>
             </div>
             <div className="card border-0 rounded-0 col-lg-8 p-0 ps-5 pt-3  overflow-x-hidden h-lg-100">
-                {activeStep === 'details' && <ProfileDetails ref={detailsRef}/>}
-                {activeStep === 'settings' && <ProfileSettings ref={settingsRef}/>}
+                {activeStep === 'details' && <ProfileDetails />}
+                {activeStep === 'settings' && <ProfileSettings />}
             </div>
         </div>)
         }

@@ -144,8 +144,8 @@ export default function Home({ userImage, userAge, userName, cardName, className
             </div>
         </div>
     
-        <div className="col-lg-3 d-lg-block p-0 px-0 d-none">
-            <div className="card col-12 py-5 pt-0 border-0 mh-100 h-100 rounded-0 card-common overflow-auto">
+        <div className="col-lg-3 d-lg-block p-0 px-0 d-none vh-lg-100">
+            <div className="card col-12 py-5 pt-0 border-0 mh-100 h-lg-100 rounded-0 card-common overflow-auto">
                 <div className="card-body px-3 pt-3">
                     <div>
                         <div className="text-left text-secondary">
