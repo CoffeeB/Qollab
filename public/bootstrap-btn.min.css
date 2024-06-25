@@ -1782,7 +1782,7 @@
     --bs-gray-700: #334155;
     --bs-gray-800: #ff3131;
     --bs-gray-900: #0f172a;
-    --bs-primary: #ff3131;
+    --bs-primary: #3e0697;
     --bs-secondary: #e2e8f0;
     --bs-success: #008008;
     --bs-info: #0dcaf0;
@@ -5719,7 +5719,7 @@ fieldset:disabled .btn {
 .nav-link {
     background: none;
     border: 0;
-    color: var(--bs-nav-link-color);
+    color: var(--bs-nav-link-color) !important;
     display: block;
     font-size: var(--bs-nav-link-font-size);
     font-weight: var(--bs-nav-link-font-weight);
@@ -5733,7 +5733,7 @@ fieldset:disabled .btn {
 }
 .nav-link:focus,
 .nav-link:hover {
-    color: var(--bs-nav-link-hover-color);
+    color: var(--bs-nav-link-hover-color) !important;
 }
 .nav-link:focus-visible {
     box-shadow: 0 0 0 0.25rem rgba(139, 61, 255, 0.25);
@@ -5887,7 +5887,7 @@ fieldset:disabled .btn {
     --bs-nav-link-padding-x: 0;
     --bs-nav-link-padding-y: 0.5rem;
     --bs-nav-link-font-weight: ;
-    --bs-nav-link-color: var(--bs-navbar-color);
+    --bs-nav-link-color: var(--bs-primary);
     --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
     --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
     display: flex;
@@ -22928,7 +22928,7 @@ a.plyr__control:before {
     color: #020617 !important;
 }
 [data-bs-theme="dark"] .text-dark {
-    color: #fff !important;
+    color: #000 !important;
 }
 [data-bs-theme="dark"] .bg-white,
 [data-bs-theme="dark"] .text-bg-white {
