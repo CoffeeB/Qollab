@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Nav() {
     return (
-        <nav className="navbar border-0 navbar-light fixed-top navbar-expand-lg py-3">
+      <nav className="navbar border-0 navbar-light fixed-top navbar-expand-lg py-3 bg-white">
         <div className="w-100">
           <button className="navbar-toggler border-0 mx-3 offcanvas-nav-btn float-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
             <i className="bx bx-menu text-dark"/>
