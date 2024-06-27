@@ -1790,7 +1790,7 @@
     --bs-danger: #ff3131;
     --bs-light: #979797;
     --bs-dark: #1e1e1f;
-    --bs-white: #fff;
+    --bs-white: #fff !important;
     --bs-primary-rgb: 3, 13, 84;
     --bs-secondary-rgb: 73, 70, 70;
     --bs-success-rgb: 0, 128, 8;
@@ -5887,7 +5887,7 @@ fieldset:disabled .btn {
     --bs-nav-link-padding-x: 0;
     --bs-nav-link-padding-y: 0.5rem;
     --bs-nav-link-font-weight: ;
-    --bs-nav-link-color: var(--bs-primary);
+    --bs-nav-link-color: var(--bs-white);
     --bs-nav-link-hover-color: var(--bs-navbar-hover-color);
     --bs-nav-link-disabled-color: var(--bs-navbar-disabled-color);
     display: flex;
