@@ -275,7 +275,7 @@ export default function profile() {
       <section className='container-fluid py-5'>
         <div className='d-flex flex-column align-items-center px-10'>
           <h3 className='text-black mb-5 text-center'>Qollab in Action: Here from Our Community</h3>
-          <div className="row row-cols-1 row-cols-md-3 g-4 m-0 flex-nowrap ps-10 pe-3" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none', animation: 'marqueeLeft 60s linear infinite'}}>
+          <div className="row row-cols-1 row-cols-md-3 g-4 m-0 flex-nowrap ps-10 pe-3" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none', animation: 'marqueeLeft 30s linear infinite'}}>
             <div className="col-5 p-2 m-0 mt-1">
               <div className="card w-100 border-secondary border-2">
                 <div className='card-title p-3 row m-0 align-items-center'>
@@ -463,7 +463,7 @@ export default function profile() {
               </div>
             </div>
           </div>
-          <div className="row row-cols-1 row-cols-md-3 g-4 m-0 flex-nowrap ps-10 pe-3" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none', animation: 'marqueeLeft 60s linear infinite'}}>
+          <div className="row row-cols-1 row-cols-md-3 g-4 m-0 flex-nowrap ps-10 pe-3" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none', animation: 'marqueeLeft 30s linear infinite'}}>
             <div className="col-5 p-2 m-0 mt-1">
               <div className="card w-100 border-secondary border-2">
                 <div className='card-title p-3 row m-0 align-items-center'>
