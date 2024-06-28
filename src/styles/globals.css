@@ -56,3 +56,13 @@ footer{
     color-scheme: dark;
   }
 }
+
+@keyframes marqueeLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes marqueeRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
