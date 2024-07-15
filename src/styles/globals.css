@@ -66,3 +66,9 @@ footer{
   0% { transform: translateX(0%); }
   100% { transform: translateX(100%); }
 }
+
+.divider {
+  height: 2px;
+  padding: 0;
+  margin: 0;
+}

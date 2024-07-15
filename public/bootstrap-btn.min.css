@@ -99,7 +99,7 @@
     color: #611f69;
 }
 .bg-facebook {
-    background-color: #1877f2;
+    background-color: #1877f2 !important;
 }
 .bg-twitter {
     background-color: #1da1f2;
