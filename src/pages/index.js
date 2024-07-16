@@ -1,11 +1,15 @@
 import React, {  } from 'react';
-import Nav from '@/components/landing/Nav'
+import Nav from '@/components/default/Nav'
 import Image from 'next/image';
 export default function profile() {
 
   return (
     <>
+      {/* logged in nav */} 
+      
+      {/* logged out nav */}
       <Nav />
+
 
       {/* landing */}
       <section className="container-fluid py-10" style={{zIndex: 10}}>

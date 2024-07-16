@@ -5327,7 +5327,7 @@ fieldset:disabled .btn {
     border-left: 0.3em solid transparent;
     border-right: 0.3em solid transparent;
     border-top: 0.3em solid;
-    content: url(./down-arrow.svg) !important;
+    content: url(./down-arrow.svg);
     display: inline-block;
 }
 .dropdown-toggle:empty:after {
@@ -5575,7 +5575,9 @@ fieldset:disabled .btn {
     pointer-events: none;
 }
 .dropdown-menu.show {
-    display: block;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 .dropdown-header {
     color: var(--bs-dropdown-header-color);
